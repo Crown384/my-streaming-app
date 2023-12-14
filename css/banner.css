@@ -1,0 +1,21 @@
+.banner_img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+@media screen and (min-width: 320px) {
+    .banner_img {
+        height: 100%;
+        width: 100%;
+        background-color: green;
+
+        display: flex;
+        background: green url(https://drive.google.com/uc?export=download&id=16LfYRyTq4WUBc2Va7OA2Z5XrSa6Sam5o);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+}
+
