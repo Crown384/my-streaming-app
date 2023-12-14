@@ -13,6 +13,36 @@
 
     <!-- <script src="https://kit.fontawesome.com/54f46fa863.js" crossorigin="anonymous"></script> -->
     <script src="./js/script.js" defer></script>
+    <script src="./service-worker.js" defer></script>
+    <script>
+        // load event
+        // if ('serviceWorker' in navigator) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('service-worker.js')
+        //             .then(registration => {
+        //                 console.log('Service Worker registered with scope:', registration.scope);
+        //             })
+        //             .catch(error => {
+        //                 console.error('Service Worker registration failed:', error);
+        //             });
+        //     });
+        // }
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.oninstall = event => {
+                event.waitUntil(
+                    navigator.serviceWorker.register('service-worker.js')
+                        .then(registration => {
+                            console.log('Service Worker registered with scope:', registration.scope);
+                        })
+                        .catch(error => {
+                            console.error('Service Worker registration failed:', error);
+                        })
+                );
+            };
+        }
+    </script>
+
     <link rel="stylesheet" href="./css/_style.css">
 </head>
 
