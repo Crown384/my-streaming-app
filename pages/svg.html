@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+   <style>
+       * {
+    margin: 0;
+}
+.logo {
+    background: blue;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    background: grey;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+}
+
+.body {
+    background: green;
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 100px auto 100px; 
+    width: 100%;
+}
+
+
+/* svg styling */
+
+.svg {
+    background: whitesmoke;
+}
+
+   </style>
+</head>
+<body>
+    <div>
+    <section class="logo">LOGO</section>
+    <section class="body">BODY
+        
+          <svg class="svg" width="100" height="100" viewBox="-50 -50 100 100">
+            <rect x="-15" y="-35" height="20" width="35" fill="pink">
+                  
+        <circle cx="0" cy="10" r="35" fill="red">
+              <circle cx="0" cy="-40" r="5" fill="none" stroke="blue" stroke-width="2">
+    </svg>
+    </section>
+    <section class="menu">MENU
+    </section>
+    
+    </div>
+    
+  
+</body>
+</html>
