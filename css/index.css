@@ -27,3 +27,9 @@ header {
 footer {
     bottom: 0;
 }
+
+header, main, footer {
+    display: grid;
+    place-content: 
+    center;
+}
