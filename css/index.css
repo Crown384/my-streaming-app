@@ -12,6 +12,7 @@ body {
 header, footer {
     position: sticky;
     background-color: blue;
+    height: 50px;
 }
 
 main {
