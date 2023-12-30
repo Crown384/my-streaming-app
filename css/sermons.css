@@ -1,11 +1,15 @@
 .container {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 
 .icons {
     width: 20px;
     height: 20px;
+}
+
+.iconBox {
+    display: flex;
 }
