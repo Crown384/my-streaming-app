@@ -4,7 +4,16 @@
 
 }
 
+/* IMAGE-TITLE */
+.imageTitle {
+    display: flex;
+}
 
+.imageTitle h3 {
+    font-size: 30px;
+}
+
+/* ICONS */
 .icons {
     width: 20px;
     height: 20px;
@@ -12,4 +21,10 @@
 
 .iconBox {
     display: flex;
+}
+
+/* Description */
+
+.description {
+    font-size: 20px;
 }
