@@ -11,3 +11,8 @@
     justify-content: space-between;
     width: 80%;
 }
+
+.social-card {
+    width: 30px;
+    height: 30px;
+}
