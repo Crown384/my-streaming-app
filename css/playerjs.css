@@ -9,8 +9,7 @@
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    background-color: pink;
-    width: 90%;
+    width: 80%;
 }
 
 .social-card {
