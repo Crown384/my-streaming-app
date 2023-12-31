@@ -8,7 +8,7 @@
     <script src="/js/playerjs_320px.js"></script>
     <link rel="stylesheet" href="/css/playerjs.css">
     <style>
-        .container {
+        body {
             width: 100%;
             height: 100%;
             background-color: #0A142F;
@@ -16,13 +16,15 @@
             /* background-repeat: no-repeat; */
             background-position: center;
             background-size: cover;
-            overflow: hidden;
+        }
 
-            /* display settings */
+        .container {
+            width: 100%;
+            min-height: 90vh;
 
             display: flex;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column;
+            
         }
     </style>
 </head>
