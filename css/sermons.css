@@ -8,6 +8,8 @@
 
 .sermon {
     width: 90%;
+    display: flex;
+    justify-content: center;
 }
 
 .img-title, .text {
@@ -23,4 +25,8 @@
      gap: 20px;
      justify-content: flex-start;
      align-items: center;
+}
+
+.text {
+    font-size: 12px;
 }
