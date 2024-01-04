@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
 .hr {
     width: 100%;
@@ -18,6 +17,7 @@
 }
 
 .sermon {
+    margin-top: 10px;
     width: 95%;
     display: flex;
     flex-direction: column;
