@@ -1,10 +1,10 @@
-/* .img {
+.img {
     width: 60px;
     height: 60px;
     background: rgb(87, 87, 255);
     background-image: url('https://wafbec.org/sites/2024/wp-content/uploads/brizy/imgs/all-speakers-2-741x476x53x0x635x476x1701681646.png');
     background-size: cover;
-} */
+}
 
 .sermon {
     width: 90vw;
@@ -15,15 +15,8 @@
 }
 
 .img-title {
-    /* display: grid;
+    display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 60px auto; */
+    grid-template-columns: 60px auto;
 
-    display: flex;
-    gap: 10px;
-}
-
-.image {
-    width: 60px;
-    height: 60px;
 }
