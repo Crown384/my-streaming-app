@@ -19,4 +19,5 @@
     grid-auto-flow: column;
     grid-template-columns: 60px auto;
     column-gap: 20px;
+    align-items: center;
 }
