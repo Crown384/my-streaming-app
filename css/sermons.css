@@ -1,43 +1,21 @@
-body {
+.img {
+    width: 60px;
+    height: 60px;
+    background: rgb(87, 87, 255);
+    background-image: url(https://wafbec.org/sites/2024/wp-content/uploads/brizy/imgs/all-speakers-2-741x476x53x0x635x476x1701681646.png);
+    background-size: cover;
+}
+
+.sermon {
+    width: 90%;
+}
+
+.img-title, .text {
+    width: 100%;
+}
+
+.img-title {
     display: grid;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-
-    width: 85%;
-
-}
-
-/* IMAGE-TITLE */
-.imageTitle {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.imageTitle h3 {
-    font-size: 30px;
-}
-
-.imageTitle img {
-    width: 30px;
-    height: 30px;
-}
-/* ICONS */
-.icons {
-    width: 20px;
-    height: 20px;
-}
-
-.iconBox {
-    display: flex;
-}
-
-/* Description */
-
-.description{
-    font-size: 15px;
+    grid-auto-flow: column;
+    grid-template-columns: 60px auto;
 }
