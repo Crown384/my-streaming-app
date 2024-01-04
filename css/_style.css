@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+@import url('/css/playerjs.css');
+@import url('/css/index.css');
+@import url('/css/sermons.css');
+
 html {
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
