@@ -49,6 +49,6 @@
 }
 
 .icons {
-    display: flex;
+    /* display: flex; */
     align-self: flex-start;
 }
