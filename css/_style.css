@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import "https://unpkg.com/open-props";
+
 
 @import url('/css/playerjs.css');
 @import url('/css/index.css');
