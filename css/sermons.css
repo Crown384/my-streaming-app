@@ -7,7 +7,7 @@
 }
 
 .sermon {
-    width: 90vw;
+    width: 90%;
 }
 
 .img-title, .text {
@@ -18,5 +18,5 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 60px auto;
-
+    column-gap: 20px;
 }
