@@ -15,9 +15,12 @@
 }
 
 .img-title {
-    display: grid;
+    /* display: grid;
     grid-auto-flow: column;
     grid-template-columns: 60px auto;
-    column-gap: 20px;
-    align-content: center;
+    column-gap: 20px; */
+     display: flex;
+     gap: 20px;
+     justify-content: flex-start;
+     align-items: center;
 }
