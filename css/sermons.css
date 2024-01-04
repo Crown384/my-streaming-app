@@ -1,7 +1,7 @@
 .img {
     width: 60px;
     height: 60px;
-    background: rgb(87, 87, 255);
+    background-color: rgb(87, 87, 255);
     background-image: url('https://wafbec.org/sites/2024/wp-content/uploads/brizy/imgs/all-speakers-2-741x476x53x0x635x476x1701681646.png');
     background-size: cover;
 }
