@@ -12,7 +12,7 @@ html {
 }
 
 a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
-    color: whitesmoke;
+    color: var(--text-color);
 }
 
 * {
