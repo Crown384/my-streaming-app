@@ -101,7 +101,7 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
         
 .gallery-scroller  a {
         width: 100%;
-        aspect-ratio: 8:5;
+        aspect-ratio: 5:8;
             object-fit: cover;
             object-position: center center;
             border-radius: 10px;
