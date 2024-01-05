@@ -60,7 +60,7 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
         .gallery-scroller {
             grid-auto-columns: 40%;
         }
-        .sermon-element  > a {
+       .sermons-scroller .sermon-element a {
         width: 100%;
         aspect-ratio: 16:9;
             object-fit: cover;
@@ -91,7 +91,7 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
             border-radius: 10px;
         }
 
-.series-scroller a {
+.series-scroller .sermon-element a {
         width: 100%;
         aspect-ratio: 1:1;
             object-fit: cover;
@@ -99,7 +99,7 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
             border-radius: 10px;
         }
         
-.gallery-scroller  a {
+.series-scroller .gallery-scroller  a {
         width: 100%;
         aspect-ratio: 5:8;
             object-fit: cover;
