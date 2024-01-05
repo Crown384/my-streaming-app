@@ -54,7 +54,12 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
         .sermons-scroller {
             grid-auto-columns: 40%;
         }
-        
+.series-scroller {
+            grid-auto-columns: 40%;
+        }
+        .gallery-scroller {
+            grid-auto-columns: 40%;
+        }
         .sermon-element  > a {
         width: 100%;
         aspect-ratio: 16:9;
