@@ -63,6 +63,8 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
             border-radius: 10px;
         }
         
+
+
         .sermon-element a img {
             width: 100%;
             border-radius: 10px;
@@ -83,6 +85,23 @@ a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
         img {
             border-radius: 10px;
         }
+
+.series-scroller a {
+        width: 100%;
+        aspect-ratio: 1:1;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 10px;
+        }
+        
+.gallery-scroller  a {
+        width: 100%;
+        aspect-ratio: 8:5;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 10px;
+        }
+        
         
         
         /* Styles for light mode */
