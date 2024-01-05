@@ -6,6 +6,13 @@
 @import url('/css/index.css');
 @import url('/css/sermons.css');
 
+
+.floating-btn {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
 html {
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
