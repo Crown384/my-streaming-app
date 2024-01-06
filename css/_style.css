@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import "https://unpkg.com/open-props";
 
+@import '/css/components/_components.css';
+@import '/css/layout/_layout.css';
 
 @import url('/css/playerjs.css');
-@import url('/css/index.css');
 @import url('/css/sermons.css');
 
 

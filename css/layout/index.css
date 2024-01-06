@@ -15,7 +15,14 @@ header {
 
 footer {
     bottom: 0;
+
+    /* layout */
+
+    display: flex;
+    justify-content: space-evenly;
 }
+
 img {
     width: 10px;
 }
+
