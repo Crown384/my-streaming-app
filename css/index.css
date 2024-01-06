@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 30px auto 30px;
+}
+
+header, footer {
+    position: sticky;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}

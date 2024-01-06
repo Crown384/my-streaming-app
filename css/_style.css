@@ -18,110 +18,52 @@ html {
     font-weight: 300;
 }
 
-a, a:active, a:hover, a:focus, a:link, a:any-link, a:visited {
+a,
+a:active,
+a:hover,
+a:focus,
+a:link,
+a:any-link,
+a:visited {
     color: var(--text-color);
 }
 
 * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-        a * {
-            outline: none;
-        }
-        
-        html {
-            overscroll-behaviour:contain;
-            scroll-behavior: smooth;
-        }
-        
-        section {
-            width: 100%;
-            display: grid;
-            grid-auto-flow: row;
-            grid-auto-rows: min-content;
-            
-            padding:10px 0px 0px 10px;
-        }
-        
-        .scroller {
-            display: grid;
-            grid-auto-flow: column;
-            overflow-x: scroll;
-            padding-top: 10px;
-        }
-        
-        .sermons-scroller {
-            grid-auto-columns: 40%;
-        }
-.series-scroller {
-            grid-auto-columns: 40%;
-        }
-        .gallery-scroller {
-            grid-auto-columns: 40%;
-        }
-       .sermons-scroller .sermon-element a {
-        width: 100%;
-        aspect-ratio: 16:9;
-            object-fit: cover;
-            object-position: center center;
-            border-radius: 10px;
-        }
-        
+    margin: 0;
+    box-sizing: border-box;
+}
 
+a * {
+    outline: none;
+}
 
-        .sermon-element a img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        .sermon-element {
-            padding: 0 0.2rem 0.2rem;
-            
-            display: grid;
-            grid-autoflow: row;
-            grid-auto-rows: min-content;
-        }
-        
-        .sermon-element > p {
-            font-size: 12px;
-        }
-        
-        img {
-            border-radius: 10px;
-        }
+html {
+    overscroll-behaviour: contain;
+    scroll-behavior: smooth;
+}
 
-.series-scroller .sermon-element a {
-        width: 100%;
-        aspect-ratio: 1:1;
-            object-fit: cover;
-            object-position: center center;
-            border-radius: 10px;
-        }
-        
-.series-scroller .gallery-scroller  a {
-        width: 100%;
-        aspect-ratio: 5:8;
-            object-fit: cover;
-            object-position: center center;
-            border-radius: 10px;
-        }
-        
-        
-        
-        /* Styles for light mode */
+section {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+
+    padding: 10px 0px 0px 10px;
+}
+
+/* Styles for light mode */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+    --bg-color: #ffffff;
+    --text-color: #000000;
 }
 
 /* Styles for dark mode */
 [data-theme="dark"] {
-  --bg-color: #000000;
-  --text-color: #ffffff;
+    --bg-color: #000000;
+    --text-color: #ffffff;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
