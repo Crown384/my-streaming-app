@@ -147,3 +147,9 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+.toggle {
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+}
