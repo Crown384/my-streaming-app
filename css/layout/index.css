@@ -76,10 +76,24 @@ section {
 }
 
 
+/* GALLERY scroller */
+.scroller .gallery-elements a img {
+    aspect-ratio: 2/6;
+    border-radius: 10px;
+}
+
+.gallery-scroller {
+    grid-auto-columns: 28%;
+}
+
+
 /* Paragraph stylying */
 .scroller p,
 .truncated-text {
     font-size: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* FOOTER styling */
