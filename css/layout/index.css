@@ -31,6 +31,12 @@ section {
     grid-auto-columns: 40%;
 }
 
+.scroller-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .imgLink_indexHTML {
     width: 100%;
 }
