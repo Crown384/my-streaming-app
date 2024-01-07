@@ -6,7 +6,6 @@ body {
 
 header,
 footer {
-    position: sticky;
     background-color: red;
 }
 
@@ -16,6 +15,11 @@ img {
 
 header {
     top: 0;
+    position: sticky;
+}
+
+footer {
+    position: absolute;
 }
 
 
