@@ -4,7 +4,8 @@ body {
     grid-template-rows: 30px auto 30px;
 }
 
-header, footer {
+header,
+footer {
     position: sticky;
     background-color: red;
 }
@@ -20,6 +21,8 @@ header {
 
 /* MAIN stylying */
 
+/* UNIVERSAL */
+
 section {
     display: flex;
     flex-direction: column;
@@ -32,32 +35,47 @@ section {
 .scroller {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 40%;
 }
 
-.scroller-element {
+.scroller > * {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0px;
 }
 
-.imgLink_indexHTML {
+.scroller a {
     width: 100%;
 }
- .imgLink_indexHTML img {
+
+.scroller a img {
     width: 100%;
-    height: 100px;
-    aspect-ratio: 8/5;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
- }
+}
 
- /* Paragraph stylying */
- .scroller p, .truncated-text {
+/* SERMONS scroller */
+.scroller .sermon-elements a img {
+    aspect-ratio: 8/5;
+    height: 80px;
+    border-radius: 10px;
+}
+
+
+/* SERIES scroller */
+.scroller .series-elements a img {
+    aspect-ratio: 1/1;
+    height: 80px;
+    border-radius: 10px;
+}
+
+
+
+/* Paragraph stylying */
+.scroller p,
+.truncated-text {
     font-size: 10px;
- }
+}
 
 /* FOOTER styling */
 footer {
@@ -69,5 +87,3 @@ footer {
     justify-content: space-evenly;
     background: linear-gradient();
 }
-
-
