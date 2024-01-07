@@ -2,3 +2,10 @@ svg {
     width: 40px;
 }
 
+/* PLAYLIST && SINGLEPLAY html */
+
+.refresh-button-icon {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}

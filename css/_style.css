@@ -46,14 +46,16 @@ html {
 
 /* Styles for light mode */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
+    --bg-color: whitesmoke;
+    --bg-color-2: white;
+    --text-color: #0a142f;
 }
 
 /* Styles for dark mode */
 [data-theme="dark"] {
-    --bg-color: #000000;
-    --text-color: #ffffff;
+    --bg-color: #0A142F;
+    --bg-color-2: #09C8F5;
+    --text-color: whitesmoke;
 }
 
 body {
