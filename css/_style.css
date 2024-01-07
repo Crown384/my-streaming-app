@@ -39,7 +39,7 @@ a * {
 }
 
 html {
-    overscroll-behaviour: contain;
+    overscroll-behavior: contain;
     scroll-behavior: smooth;
 }
 
