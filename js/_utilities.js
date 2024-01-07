@@ -20,3 +20,11 @@ document.addEventListener('touchstart', (event) => {
     }
 });
 
+element.style.userSelect = 'none';
+
+
+document.addEventListener('contextmenu', (event) => {
+    if (event.target.matches('img')) {
+        event.preventDefault();
+    }
+});
