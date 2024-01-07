@@ -19,6 +19,24 @@ html {
     font-weight: 300;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
+
+}
+
 a,
 a:active,
 a:hover,
