@@ -45,7 +45,7 @@ section {
 
  /* Paragraph stylying */
  .scroller p, .truncated-text {
-    font-size: 100;
+    font-size: 12px;
  }
 
 /* FOOTER styling */
