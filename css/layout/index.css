@@ -37,10 +37,15 @@ section {
  .imgLink_indexHTML img {
     width: 100%;
     height: 100px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 8/5;
     object-fit: cover;
     object-position: center;
-    border-radius: 20px;
+    border-radius: 10px;
+ }
+
+ /* Paragraph stylying */
+ .scroller p, .truncated-text {
+    font-size: 100;
  }
 
 /* FOOTER styling */
