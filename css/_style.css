@@ -97,6 +97,14 @@ main {
     --text-color: #0a142f;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0A142F;
+        --bg-color-2: #09C8F5;
+        --text-color: whitesmoke;
+    }
+}
+
 /* Styles for dark mode */
 [data-theme="dark"] {
     --bg-color: #0A142F;
