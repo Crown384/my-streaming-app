@@ -55,6 +55,10 @@ section {
 }
 
 /* SERMONS scroller */
+.sermon-scroller {
+    grid-auto-columns: 44%;
+}
+
 .scroller .sermon-elements a img {
     aspect-ratio: 8/5;
     height: 80px;
@@ -69,6 +73,9 @@ section {
     border-radius: 10px;
 }
 
+.series-scroller {
+    grid-auto-columns: 33%;
+}
 
 
 /* Paragraph stylying */
