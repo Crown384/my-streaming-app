@@ -39,6 +39,11 @@ a:focus {
     outline: none;
 }
 
+
+a:focus {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
 html {
     overscroll-behavior: contain;
     scroll-behavior: smooth;
