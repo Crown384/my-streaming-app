@@ -6,6 +6,7 @@ body {
 
 header,
 footer {
+    position: sticky;
     background-color: red;
 }
 
@@ -19,7 +20,13 @@ header {
 }
 
 footer {
-    position: absolute;
+    bottom: 0;
+
+    /* layout */
+
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient();
 }
 
 
@@ -102,12 +109,3 @@ section {
 }
 
 /* FOOTER styling */
-footer {
-    bottom: 0;
-
-    /* layout */
-
-    display: flex;
-    justify-content: space-evenly;
-    background: linear-gradient();
-}
