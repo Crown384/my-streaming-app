@@ -6,6 +6,7 @@ body {
 
 header, footer {
     position: sticky;
+    background-color: red;
 }
 
 img {
