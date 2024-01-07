@@ -8,4 +8,3 @@ function handleLinkFocus(event) {
     }
 }
 
-element.style.userSelect = 'none';
