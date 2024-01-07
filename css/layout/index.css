@@ -25,7 +25,8 @@ section {
     flex-direction: column;
     gap: 10px;
 
-    padding: 20px 10px 0px 0px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .scroller {
