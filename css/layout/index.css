@@ -78,7 +78,7 @@ section {
 
 /* GALLERY scroller */
 .scroller .gallery-elements a img {
-    aspect-ratio: 2/6;
+    aspect-ratio: 1/4;
     border-radius: 10px;
 }
 
