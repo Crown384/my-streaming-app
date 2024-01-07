@@ -39,6 +39,17 @@ a:focus {
     outline: none;
 }
 
+.no-select {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
+}
+
 
 a:focus {
     -webkit-tap-highlight-color: transparent;

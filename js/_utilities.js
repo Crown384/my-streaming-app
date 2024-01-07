@@ -8,14 +8,4 @@ function handleLinkFocus(event) {
     }
 }
 
-document.addEventListener('contextmenu', (event) => {
-    if (event.target.tagName === 'A') {
-        event.preventDefault();
-    }
-});
-
-document.addEventListener('touchstart', (event) => {
-    if (event.target.tagName === 'A') {
-        event.preventDefault();
-    }
-});
+element.style.userSelect = 'none';
