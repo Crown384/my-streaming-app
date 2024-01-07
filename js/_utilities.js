@@ -42,7 +42,7 @@ document.addEventListener('touchstart', (event) => {
 
 
 
-// LIGHT-DARK-TOGGLE
+// LIGHT-DARK-TOGGLE OLD
 
 const modeToggleBtn = document.getElementById('lightDarktoggle');
 const htmlElement = document.documentElement;
@@ -54,3 +54,28 @@ modeToggleBtn.addEventListener('click', function () {
         htmlElement.setAttribute('data-theme', 'dark');
     }
 });
+
+
+// LIGHT-DARK-TOGGLE ___NEW
+
+// Store a reference to the svg elements and button
+const darkSvg = document.getElementById('dark-svg');
+const lightSvg = document.getElementById('light-svg');
+const toggleButton = document.getElementById('toggle-mode-button');
+
+// Set initial state to dark mode
+let isDarkMode = true;
+
+// Hide the light SVG initially
+lightSvg.style.display = 'none';
+
+function toggleMode() {
+    isDarkMode = !isDarkMode;
+    darkSvg.style.display = isDarkMode ? 'block' : 'none';
+    lightSvg.style.display = isDarkMode ? 'none' : 'block';
+    // Optionally change other elements based on mode
+}
+
+
+toggleButton.addEventListener('click', toggleMode);
+
