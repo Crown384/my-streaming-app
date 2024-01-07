@@ -103,3 +103,5 @@ function toggleMode() {
 
 // Add event listener to SVG for user-initiated toggle
 lightToggleSvg.addEventListener('click', toggleMode);
+darkSvg.addEventListener('click', toggleMode);
+
