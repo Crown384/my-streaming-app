@@ -47,13 +47,13 @@ document.addEventListener('touchstart', (event) => {
 // const modeToggleBtn = document.getElementById('lightDarktoggle');
 // const htmlElement = document.documentElement;
 
-// modeToggleBtn.addEventListener('click', function () {
-//     if (htmlElement.hasAttribute('data-theme')) {
-//         htmlElement.removeAttribute('data-theme');
-//     } else {
-//         htmlElement.setAttribute('data-theme', 'dark');
-//     }
-// });
+modeToggleBtn.addEventListener('click', function () {
+    if (htmlElement.hasAttribute('data-theme')) {
+        htmlElement.removeAttribute('data-theme');
+    } else {
+        htmlElement.setAttribute('data-theme', 'dark');
+    }
+});
 
 
 // // // LIGHT-DARK-TOGGLE ___OLD--2
@@ -174,14 +174,14 @@ const lightSVG = document.getElementById('light-toggle-svg');
 const htmlElement = document.documentElement;
 
 function toggleTheme() {
-    if (htmlElement.classList.contains('dark-theme')) {
-        htmlElement.classList.remove('dark-theme');
-        darkSVG.style.display = 'block';
-        lightSVG.style.display = 'none';
-    } else {
-        htmlElement.classList.add('dark-theme');
+    if (htmlElement.getAttribute('dark-theme') === 'dark') {
+        htmlElement.setAttribute('dark-theme', 'light');
         darkSVG.style.display = 'none';
         lightSVG.style.display = 'block';
+    } else {
+        htmlElement.setAttribute('dark-theme', 'dark');
+        darkSVG.style.display = 'block';
+        lightSVG.style.display = 'none';
     }
 }
 
@@ -192,11 +192,14 @@ const prefersLightMode = window.matchMedia('(prefers-color-scheme: light)').matc
 
 // Set initial theme based on user's preference
 if (prefersLightMode) {
-    htmlElement.classList.remove('dark-theme'); // Remove dark theme if prefers light mode
+    htmlElement.setAttribute('dark-theme', 'light'); // Set light theme if prefers light mode
     darkSVG.style.display = 'none';
     lightSVG.style.display = 'block';
 } else {
-    htmlElement.classList.add('dark-theme'); // Set dark theme by default
+    htmlElement.setAttribute('dark-theme', 'dark'); // Set dark theme by default
     darkSVG.style.display = 'block';
     lightSVG.style.display = 'none';
 }
+
+// Click function for toggling the theme
+toggleButton.addEventListener('click', toggleTheme);
