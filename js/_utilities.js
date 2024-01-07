@@ -28,3 +28,12 @@ document.addEventListener('contextmenu', (event) => {
         event.preventDefault();
     }
 });
+
+document.addEventListener('touchstart', (event) => {
+    if (event.target.matches('img')) {
+        // Prevent default behavior (Chrome menu)
+        event.preventDefault();
+        // Add your custom long press interaction here
+        // (e.g., show custom menu, trigger action)
+    }
+});
