@@ -35,6 +35,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
 }
 
 .imgLink_indexHTML {
@@ -51,7 +52,7 @@ section {
 
  /* Paragraph stylying */
  .scroller p, .truncated-text {
-    font-size: 12px;
+    font-size: 10px;
  }
 
 /* FOOTER styling */
