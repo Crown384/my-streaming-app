@@ -7,3 +7,15 @@ function handleLinkFocus(event) {
         event.target.blur(); // Remove focus immediately
     }
 }
+
+document.addEventListener('contextmenu', (event) => {
+    if (event.target.tagName === 'A') {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener('touchstart', (event) => {
+    if (event.target.tagName === 'A') {
+        event.preventDefault();
+    }
+});

@@ -42,8 +42,15 @@ a:focus {
 
 a:focus {
     -webkit-tap-highlight-color: transparent;
-  }
-  
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
+    /* Firefox specific */
+}
+
+
 html {
     overscroll-behavior: contain;
     scroll-behavior: smooth;
