@@ -122,6 +122,11 @@ main {
     --bg-color-2: white;
     --text-color: #0a142f;
 }
+.dark-theme {
+    --bg-color: whitesmoke;
+    --bg-color-2: white;
+    --text-color: #0a142f;
+}
 
 @media (prefers-color-scheme: dark) {
     :root {
