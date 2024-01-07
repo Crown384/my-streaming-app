@@ -1,3 +1,5 @@
+// TEXT COPY && IMAGE CHROME-MENU LONG-PRESS
+
 // Combine mousedown and touchstart events
 document.addEventListener('mousedown', handleLinkFocus);
 document.addEventListener('touchstart', handleLinkFocus);
@@ -35,5 +37,20 @@ document.addEventListener('touchstart', (event) => {
         event.preventDefault();
         // Add your custom long press interaction here
         // (e.g., show custom menu, trigger action)
+    }
+});
+
+
+
+// LIGHT-DARK-TOGGLE
+
+const modeToggleBtn = document.getElementById('lightDarktoggle');
+const htmlElement = document.documentElement;
+
+modeToggleBtn.addEventListener('click', function () {
+    if (htmlElement.hasAttribute('data-theme')) {
+        htmlElement.removeAttribute('data-theme');
+    } else {
+        htmlElement.setAttribute('data-theme', 'dark');
     }
 });
