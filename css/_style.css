@@ -124,13 +124,13 @@ main {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #0a142f;
         --bg-color-2: #09C8F5;
         --text-color: whitesmoke;
     }
-}
+} */
 
 /* Styles for dark mode */
 
