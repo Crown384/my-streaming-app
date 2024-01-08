@@ -41,33 +41,14 @@ document.addEventListener('touchstart', (event) => {
 });
 
 
-// Check initial system preference
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const modeToggleBtn = document.getElementById('lightDarkToggle');
+const htmlElement = document.documentElement;
 
-// Set initial state and apply initial styles
-let isDarkMode = prefersDarkMode;
-toggleMode(); // Call once to set initial styles
-
-// Toggle function for both system preference and user clicks
-function toggleMode() {
-  isDarkMode = !isDarkMode;
-
-  // Toggle theme class on documentElement to apply CSS changes
-  document.documentElement.classList.toggle('dark-theme');
-
-  // Toggle SVG icons based on theme
-  const lightToggleSvg = document.getElementById('light-toggle-svg');
-  const darkSvg = document.getElementById('dark-svg');
-  lightToggleSvg.style.display = isDarkMode ? 'block' : 'none';
-  darkSvg.style.display = isDarkMode ? 'none' : 'block';
-
-  // Persist user preference if desired (implement logic here)
-}
-
-// Add event listener to the toggle button
-const toggleButton = document.getElementById('lightDarkToggle');
-toggleButton.addEventListener('click', toggleMode);
-
-// Listen for system preference changes
-const prefersDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-prefersDarkModeQuery.addEventListener('change', toggleMode);
+modeToggleBtn.addEventListener('click', function() {
+  const currentTheme = htmlElement.getAttribute('data-theme');
+  if (currentTheme === 'dark') {
+    htmlElement.removeAttribute('data-theme');
+  } else {
+    htmlElement.setAttribute('data-theme', 'dark');
+  }
+});

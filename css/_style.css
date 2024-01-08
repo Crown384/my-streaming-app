@@ -135,15 +135,15 @@ main {
 /* Styles for dark mode */
 
 /* .dark-theme {
-    --bg-color: whitesmoke;
-    --bg-color-2: white;
-    --text-color: #0a142f;
-}
-[data-theme="dark"] {
-    --bg-color: whitesmoke;
-    --bg-color-2: white;
-    --text-color: #0a142f;
+   --bg-color: #0a142f;
+        --bg-color-2: #09C8F5;
+        --text-color: whitesmoke;
 } */
+[data-theme="dark"] {
+    --bg-color: #0a142f;
+    --bg-color-2: #09C8F5;
+    --text-color: whitesmoke;
+}
 
 body {
     background-color: var(--bg-color);
