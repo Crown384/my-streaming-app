@@ -27,8 +27,8 @@
 
 <body>
 
-    <svg class="refresh-button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-        transform="rotate(45)">
+    <svg data-section-id="target-section" class="refresh-button-icon" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg" transform="rotate(45)">
         <a href="/pages/playlist.html">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -88,6 +88,32 @@
             id: "theSevenSpiritsOfGod",
             file: [{ "title": "<center><p style='font-size:1rem'><b>The Spirit of Grace</b></p><p style='font-size: 0.7rem'>Apostle Arome Osayi</p></center>", "file": "https://spiritnerds.org/wp-content/uploads/2023/07/Day-1-The-Spirit-of-Grace-Apostle-Arome-Osayi.mp3", "poster": "https://i0.wp.com/kingdomsermons.com/wp-content/uploads/2023/09/347260326_650304493797561_5362018731926269890_n-1.jpg?fit=1080%2C1080&ssl=1" }, { "title": "<center><p style='font-size:1rem'><b>The Spirit of Glory</b></p><p style='font-size: 0.7rem'>Apostle Arome Osayi</p></center>", "file": "https://spiritnerds.org/wp-content/uploads/2023/07/Day-2-Morning-Spirit-of-Glory-Apostle-Arome-Osayi.mp3", "poster": "https://i0.wp.com/kingdomsermons.com/wp-content/uploads/2023/09/347260326_650304493797561_5362018731926269890_n-1.jpg?fit=1080%2C1080&ssl=1" }, { "title": "<center><p style='font-size:1rem'><b>The Seven Spirits of God</b></p><p style='font-size: 0.7rem'>Apostle Arome Osayi</p></center>", "file": "https://spiritnerds.org/wp-content/uploads/2023/07/Day-2-Evening-The-Seven-Spirits-Of-God-Apostle-Arome-Osayi.mp3", "poster": "https://i0.wp.com/kingdomsermons.com/wp-content/uploads/2023/09/347260326_650304493797561_5362018731926269890_n-1.jpg?fit=1080%2C1080&ssl=1" }]
         });
+    </script>
+
+    <script>
+        function reloadToSection() {
+            // Get the button or icon that was clicked
+            const clickedElement = event.target;
+
+            // Use a data attribute to store the target section ID
+            const sectionIdToScrollTo = clickedElement.getAttribute('data-section-id');
+
+            // Get the current URL
+            const currentUrl = window.location.href;
+
+            // Construct the new URL with the hash for the section
+            const newUrl = `${currentUrl}#${sectionIdToScrollTo}`;
+
+            // Reload the page with the new URL
+            window.location.href = newUrl;
+        }
+
+        // Add event listeners to buttons and/or SVG icons with the data-section-id attribute
+        const elementsWithSectionId = document.querySelectorAll('[data-section-id]');
+        elementsWithSectionId.forEach(element => {
+            element.addEventListener('click', reloadToSection);
+        });
+
     </script>
 </body>
 
