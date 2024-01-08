@@ -133,7 +133,8 @@ main {
 }
 
 /* Styles for dark mode */
-.dark-theme {
+
+/* .dark-theme {
     --bg-color: whitesmoke;
     --bg-color-2: white;
     --text-color: #0a142f;
@@ -142,7 +143,7 @@ main {
     --bg-color: whitesmoke;
     --bg-color-2: white;
     --text-color: #0a142f;
-}
+} */
 
 body {
     background-color: var(--bg-color);
