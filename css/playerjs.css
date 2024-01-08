@@ -24,7 +24,6 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
-    overflow: hidden;
 }
 
 .loading-animation {
