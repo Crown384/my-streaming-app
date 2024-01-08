@@ -41,14 +41,3 @@ document.addEventListener('touchstart', (event) => {
 });
 
 
-const modeToggleBtn = document.getElementById('lightDarkToggle');
-const htmlElement = document.documentElement;
-
-modeToggleBtn.addEventListener('click', function() {
-  const currentTheme = htmlElement.getAttribute('data-theme');
-  if (currentTheme === 'dark') {
-    htmlElement.removeAttribute('data-theme');
-  } else {
-    htmlElement.setAttribute('data-theme', 'dark');
-  }
-});

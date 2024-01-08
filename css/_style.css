@@ -75,7 +75,7 @@ a:focus {
 
 a {
     -webkit-tap-highlight-color: transparent;
-    -moz-appearance: none;
+    /* -moz-appearance: none; */
     /* Firefox specific */
 }
 
