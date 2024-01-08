@@ -44,8 +44,8 @@ document.addEventListener('touchstart', (event) => {
 
 // LIGHT-DARK-TOGGLE OLD
 
-// const modeToggleBtn = document.getElementById('lightDarktoggle');
-// const htmlElement = document.documentElement;
+const modeToggleBtn = document.getElementById('lightDarktoggle');
+const htmlElement = document.documentElement;
 
 modeToggleBtn.addEventListener('click', function () {
     if (htmlElement.hasAttribute('data-theme')) {
@@ -168,38 +168,38 @@ modeToggleBtn.addEventListener('click', function () {
 // prefersDarkModeQuery.addEventListener('change', toggleMode);
 
 
-const toggleButton = document.getElementById('lightDarkToggle');
-const darkSVG = document.getElementById('dark-svg');
-const lightSVG = document.getElementById('light-toggle-svg');
-const htmlElement = document.documentElement;
+// const toggleButton = document.getElementById('lightDarkToggle');
+// const darkSVG = document.getElementById('dark-svg');
+// const lightSVG = document.getElementById('light-toggle-svg');
+// const htmlElement = document.documentElement;
 
-function toggleTheme() {
-    if (htmlElement.getAttribute('dark-theme') === 'dark') {
-        htmlElement.setAttribute('dark-theme', 'light');
-        darkSVG.style.display = 'none';
-        lightSVG.style.display = 'block';
-    } else {
-        htmlElement.setAttribute('dark-theme', 'dark');
-        darkSVG.style.display = 'block';
-        lightSVG.style.display = 'none';
-    }
-}
+// function toggleTheme() {
+//     if (htmlElement.getAttribute('dark-theme') === 'dark') {
+//         htmlElement.setAttribute('dark-theme', 'light');
+//         darkSVG.style.display = 'none';
+//         lightSVG.style.display = 'block';
+//     } else {
+//         htmlElement.setAttribute('dark-theme', 'dark');
+//         darkSVG.style.display = 'block';
+//         lightSVG.style.display = 'none';
+//     }
+// }
 
-toggleButton.addEventListener('click', toggleTheme);
+// toggleButton.addEventListener('click', toggleTheme);
 
-// Check user's preference for light mode
-const prefersLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+// // Check user's preference for light mode
+// const prefersLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
 
-// Set initial theme based on user's preference
-if (prefersLightMode) {
-    htmlElement.setAttribute('dark-theme', 'light'); // Set light theme if prefers light mode
-    darkSVG.style.display = 'none';
-    lightSVG.style.display = 'block';
-} else {
-    htmlElement.setAttribute('dark-theme', 'dark'); // Set dark theme by default
-    darkSVG.style.display = 'block';
-    lightSVG.style.display = 'none';
-}
+// // Set initial theme based on user's preference
+// if (prefersLightMode) {
+//     htmlElement.setAttribute('dark-theme', 'light'); // Set light theme if prefers light mode
+//     darkSVG.style.display = 'none';
+//     lightSVG.style.display = 'block';
+// } else {
+//     htmlElement.setAttribute('dark-theme', 'dark'); // Set dark theme by default
+//     darkSVG.style.display = 'block';
+//     lightSVG.style.display = 'none';
+// }
 
-// Click function for toggling the theme
-toggleButton.addEventListener('click', toggleTheme);
+// // Click function for toggling the theme
+// toggleButton.addEventListener('click', toggleTheme);
