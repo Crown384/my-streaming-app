@@ -77,33 +77,33 @@ modeToggleBtn.addEventListener('click', function () {
 // // }
 
 
-// // Check initial system preference
-// const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// Check initial system preference
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// // Set initial state and apply initial styles
-// let isDarkMode = prefersDarkMode;
-// toggleMode(); // Call once to set initial styles
+// Set initial state and apply initial styles
+let isDarkMode = prefersDarkMode;
+toggleMode(); // Call once to set initial styles
 
-// // Toggle function for both system preference and user clicks
-// function toggleMode() {
-//   isDarkMode = !isDarkMode;
-//   document.body.classList.toggle('dark-mode'); // Toggle CSS class for prefers-color-scheme
+// Toggle function for both system preference and user clicks
+function toggleMode() {
+  isDarkMode = !isDarkMode;
+  document.body.classList.toggle('dark-mode'); // Toggle CSS class for prefers-color-scheme
 
-//   // Toggle SVG icons
-//   const lightToggleSvg = document.getElementById('light-toggle-svg');
-//   const darkSvg = document.getElementById('dark-svg');
-//   lightToggleSvg.style.display = isDarkMode ? 'none' : 'block';
-//   darkSvg.style.display = isDarkMode ? 'block' : 'none';
+  // Toggle SVG icons
+  const lightToggleSvg = document.getElementById('light-toggle-svg');
+  const darkSvg = document.getElementById('dark-svg');
+  lightToggleSvg.style.display = isDarkMode ? 'none' : 'block';
+  darkSvg.style.display = isDarkMode ? 'block' : 'none';
 
-//   // Persist user preference if desired
-//   if (isDarkMode !== prefersDarkMode) {
-//     // Store user's preference in local storage or cookies
-//   }
-// }
+  // Persist user preference if desired
+  if (isDarkMode !== prefersDarkMode) {
+    // Store user's preference in local storage or cookies
+  }
+}
 
-// // Add event listener to SVG for user-initiated toggle
-// lightToggleSvg.addEventListener('click', toggleMode);
-// darkSvg.addEventListener('click', toggleMode);
+// Add event listener to SVG for user-initiated toggle
+lightToggleSvg.addEventListener('click', toggleMode);
+darkSvg.addEventListener('click', toggleMode);
 
 
 // function toggleMode() {
