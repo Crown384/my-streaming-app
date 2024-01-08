@@ -1,6 +1,7 @@
 .playerjs {
     width: 95%;
     height: 90%;
+    place-self: center;
 }
 
 .socials {
