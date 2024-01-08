@@ -44,7 +44,7 @@ document.addEventListener('touchstart', (event) => {
 
 // LIGHT-DARK-TOGGLE OLD
 
-const modeToggleBtn = document.getElementById('lightDarktoggle');
+const modeToggleBtn = document.getElementById('lightDarkToggle');
 const htmlElement = document.documentElement;
 
 modeToggleBtn.addEventListener('click', function () {
