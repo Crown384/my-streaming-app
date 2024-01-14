@@ -8,7 +8,8 @@
     position: absolute;
 
     bottom: 20px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: space-between;
     width: 80%;
 }
@@ -19,63 +20,16 @@
 }
 
 .playlist-container {
-    width: 100%;
+    min-width: 100vh;
     height: 100%;
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: 90vh;
+    gap: 20px;
 }
 
-.loading-animation {
-    display: grid;
-    place-content: center;
+/* sermon-container */
+
+.sermon-container {
+
 }
-
-.text-animation {
-    width: 200px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #ddd;
-
-    opacity: 0;
-    animation: text-fade-in 2s ease-in-out;
-    animation-fill-mode: both;
-}
-
-@keyframes text-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.image-animation {
-    width: 200px;
-    height: 200px;
-    opacity: 0;
-    animation: image-reveal 2s ease-out;
-    animation-fill-mode: both;
-    background-color: #ddd;
-  }
-
-  @keyframes image-reveal {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 0.25;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    75% {
-      opacity: 0.75;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
