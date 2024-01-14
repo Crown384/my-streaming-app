@@ -1,5 +1,6 @@
 .playerjs {
     width: 95%;
+    height: 90%;
 }
 
 .socials {
@@ -17,3 +18,6 @@
     height: 30px;
 }
 
+.sermon-container {
+  height: 100vh;
+}
