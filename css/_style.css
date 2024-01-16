@@ -7,6 +7,11 @@
 @import url('/css/playerjs.css');
 @import url('/css/sermons.css');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .floating-btn {
     position: absolute;
@@ -47,11 +52,6 @@ a:visited {
     color: var(--text-color);
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 a:focus {
     outline: none;
@@ -83,6 +83,8 @@ a {
 html {
     overscroll-behavior: contain;
     scroll-behavior: smooth;
+
+    background-color: var(--bg-color);
 }
 
 body {
