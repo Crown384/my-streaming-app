@@ -4,6 +4,9 @@
         display: grid;
         grid-auto-flow: column;
         gap: 10px;
+
+        /* parent control */
+        align-self: flex-start;
     }
 
     .svg-home {
