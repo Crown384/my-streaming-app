@@ -9,21 +9,22 @@
 
     <link rel="stylesheet" href="/css/_style.css">
     <style>
-        .toggle-container {
-            display: grid;
-            grid-auto-flow: row;
-            padding: 20px;
-        }
-
+        
         .toggle-header {
             cursor: pointer;
             margin-bottom: 10px;
         }
 
+        .contact-us {
+            display: grid;
+            grid-auto-flow: row;
+            gap: 10px;
+        }
         .toggle-content {
             display: none;
             padding: 10px;
             background-color: #0f204eb4;
+
         }
 
         .toggle-content.active {
@@ -104,7 +105,7 @@
         </div>
 
         <h2 class="toggle-header">Contact Us:</h2>
-        <div class="toggle-content">
+        <div class="toggle-content contact-us">
             <div class="social-link">
                 <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
