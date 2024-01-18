@@ -1,12 +1,11 @@
-svg {
-    width: 40px;
-}
+@media screen and (min-width: 320px) {
+    .svg-home {
+        width: 42px;
+        height: 42px;
+        background-color: aqua;
+    }
 
-/* PLAYLIST && SINGLEPLAY html */
-
-.refresh-button-icon {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    z-index: 1;
+    svg {
+        width: 40px;
+    }
 }

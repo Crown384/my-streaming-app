@@ -16,7 +16,7 @@
 <body>
     <header>
 
-
+        <a href="/pages/_settings.html" class="svg-home">
             <svg id="dark-svg" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -30,7 +30,9 @@
                         fill="#030504"></path>
                 </g>
             </svg>
+        </a>
 
+        <a href="/pages/_settings.html" class="svg-home">
             <svg id="light-toggle-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                 style="display: none;">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -48,45 +50,46 @@
                     </defs>
                 </g>
             </svg>
+        </a>
 
 
     </header>
     <main>
-<button id="lightDarkToggle">Toggle Button</button>
+        <button id="lightDarkToggle">Toggle Button</button>
     </main>
     <footer></footer>
 
     <script>
         // Check initial system preference
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// Set initial state and apply initial styles
-let isDarkMode = prefersDarkMode;
-toggleMode(); // Call once to set initial styles
+        // Set initial state and apply initial styles
+        let isDarkMode = prefersDarkMode;
+        toggleMode(); // Call once to set initial styles
 
-// Toggle function for both system preference and user clicks
-function toggleMode() {
-  isDarkMode = !isDarkMode;
+        // Toggle function for both system preference and user clicks
+        function toggleMode() {
+            isDarkMode = !isDarkMode;
 
-  // Toggle theme class on documentElement to apply CSS changes
-  document.documentElement.classList.toggle('dark-theme');
+            // Toggle theme class on documentElement to apply CSS changes
+            document.documentElement.classList.toggle('dark-theme');
 
-  // Toggle SVG icons based on theme
-  const lightToggleSvg = document.getElementById('light-toggle-svg');
-  const darkSvg = document.getElementById('dark-svg');
-  lightToggleSvg.style.display = isDarkMode ? 'block' : 'none';
-  darkSvg.style.display = isDarkMode ? 'none' : 'block';
+            // Toggle SVG icons based on theme
+            const lightToggleSvg = document.getElementById('light-toggle-svg');
+            const darkSvg = document.getElementById('dark-svg');
+            lightToggleSvg.style.display = isDarkMode ? 'block' : 'none';
+            darkSvg.style.display = isDarkMode ? 'none' : 'block';
 
-  // Persist user preference if desired (implement logic here)
-}
+            // Persist user preference if desired (implement logic here)
+        }
 
-// Add event listener to the toggle button
-const toggleButton = document.getElementById('lightDarkToggle');
-toggleButton.addEventListener('click', toggleMode);
+        // Add event listener to the toggle button
+        const toggleButton = document.getElementById('lightDarkToggle');
+        toggleButton.addEventListener('click', toggleMode);
 
-// Listen for system preference changes
-const prefersDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-prefersDarkModeQuery.addEventListener('change', toggleMode);
+        // Listen for system preference changes
+        const prefersDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        prefersDarkModeQuery.addEventListener('change', toggleMode);
 
     </script>
 </body>
