@@ -31,6 +31,37 @@
         .toggle-content.active {
             display: block;
         }
+
+        .toggle-content {
+            transition: all 0.5s ease;
+            /* Define transition property & duration */
+            opacity: 0;
+            /* Initially hidden with zero opacity */
+        }
+
+        .toggle-content.active {
+            opacity: 1;
+            /* Appears at full opacity when active */
+            /* Additional styles for desired animation, e.g., height or margin changes */
+        }
+
+
+        .animate {
+            animation: showContent 0.5s ease forwards;
+            /* Animation name, duration & timing */
+        }
+
+        @keyframes showContent {
+            from {
+                opacity: 0;
+                /* Additional animation styles you defined for the active state */
+            }
+
+            to {
+                opacity: 1;
+                /* Additional animation styles you defined for the active state */
+            }
+        }
     </style>
 </head>
 
@@ -93,8 +124,10 @@
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
                 content.classList.toggle('active');
+                content.classList.toggle('animate'); /* Add/remove animation class */
             });
         });
+
 
     </script>
 </body>
