@@ -397,29 +397,6 @@
             });
         });
 
-        // MAPS
-
-        function initMap() {
-            // Get the map container element
-            const mapContainer = document.getElementById("map");
-
-            // Create a new map instance
-            const map = new google.maps.Map(mapContainer, {
-                zoom: 15, // Adjust zoom level as needed
-                center: {
-                    lat: YOUR_COMPANY_LATITUDE,
-                    lng: YOUR_COMPANY_LONGITUDE
-                }
-            });
-
-            // Add a marker for your company's location
-            const marker = new google.maps.Marker({
-                position: { lat: YOUR_COMPANY_LATITUDE, lng: YOUR_COMPANY_LONGITUDE },
-                map: map,
-                title: "Sphere of Light Church Ibadan"
-            });
-        }
-
     </script>
 </body>
 
