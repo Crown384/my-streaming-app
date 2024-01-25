@@ -22,8 +22,8 @@ const allItems = [
     results.forEach(result => {
         const resultElement = document.createElement('div');
  
-        // Generate links based on the lowercase title of the page
-        const lowercasedTitle = result.title.toLowerCase();
+        // Generate links based on the lowercase title of the page && replaces spaces with hyphen
+        const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
         resultElement.innerHTML = `<a href="pages/${encodeURIComponent(lowercasedTitle)}.html">${result.title}</a>`;
  
         searchResults.appendChild(resultElement);
