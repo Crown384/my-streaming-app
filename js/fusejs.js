@@ -54,12 +54,11 @@ function search() {
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
-    // Function to display all items, ensuring new ones are added first
+    // Function to display all items, prepending new ones
     function displayAllItems() {
-        contentContainer.innerHTML = ""; // Clear existing content
+        let contentHTML = ''; // Build HTML string dynamically
 
-        // Reverse the allItems array to add new items at the beginning
-        allItems.reverse().forEach(item => {
+        allItems.forEach(item => {
             contentHTML += `
           <div class="card">
             <h2>${item.title}</h2>
@@ -69,7 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         });
 
-        contentContainer.innerHTML = contentHTML;
+        // Wrap the HTML string in a temporary element
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = contentHTML;
+
+        // Prepend all child elements of the temporary element to the container
+        while (tempElement.firstChild) {
+            contentContainer.prepend(tempElement.firstChild);
+        }
     }
 
     // Initial display
