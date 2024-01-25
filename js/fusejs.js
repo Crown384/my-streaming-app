@@ -1,13 +1,13 @@
 const allItems = [
     {
-        id: 1,
+        id: 3,
         title: 'Sermons List',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
         description: 'Description of the sermons list page' // Added description
     },
     {
-        id: 1,
+        id: 2,
         title: 'Latest',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
@@ -15,7 +15,7 @@ const allItems = [
         path: "playlists/test.html"
     },
     {
-        id: 2,
+        id: 1,
         title: '_SeTTings',
         keywords: ['keyword3', 'keyword4'],
         imgpath: 'https://i0.wp.com/impactconnect.com.ng/wp-content/uploads/2024/01/PROPHETIC_AND_IMPARTATION_SERVICE_A_CHARGE_KOINONIA_ABUJA_2023_WITH-mp3-image.jpg?resize=780%2C470&ssl=1', // Added imgpath
@@ -24,8 +24,8 @@ const allItems = [
     // ... more items with imgpath and description added
 ];
 
+// SEARCH FUNCTION
 
-const relativePath = item.path || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -46,39 +46,39 @@ function search() {
 
         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        resultElement.innerHTML = `<a href="pages/${relativePath}.html">${result.title}</a>`;
+        const relativePath = result.path || 'pages/' + formattedTitle + '.html'; // Use relative path from result object
 
+        resultElement.innerHTML = `<a href="${relativePath}">${result.title}</a>`;
         searchResults.appendChild(resultElement);
     });
 }
 
-// DYNAMIC-CONTENT
 
+// DYNAMIC-CONTENT
 
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
     // Build the HTML string dynamically, including correct paths
     let contentHTML = '';
+
     allItems.forEach(item => {
         const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
         const relativePath = item.path || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
-        contentHTML += `
-    <div class="card scroller-elements dynamic-elements">
-      <a href="${relativePath}">
-        <img src="${item.imgpath}" alt="${item.title} Image">
-      </a>
-      <img src="${item.imgpath}" alt="${item.title} Image">
-      <p>${item.description}</p>
-    </div>
-  `;
-    });
 
+        contentHTML += `
+            <div class="card scroller-elements dynamic-elements">
+                <a href="${relativePath}">
+                    <img src="${item.imgpath}" alt="${item.title} Image">
+                </a>
+                <p>${item.description}</p>
+            </div>
+        `;
+    });
 
     // Set the content container's innerHTML with the built string
     contentContainer.innerHTML = contentHTML;
 });
-
 
 
 
