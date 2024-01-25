@@ -44,26 +44,23 @@ function search() {
     });
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
-    // Loop through each item in the allItems array
+    // Build the HTML string dynamically
+    let contentHTML = '';
     allItems.forEach(item => {
-        // Create a content card for each item
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        // Add content based on the item properties
-        card.innerHTML = `
-            <h2>${item.title}</h2>
-            <img src="${item.imgpath}" alt="${item.title} Image">
-            <p>${item.description}</p>
-        `;
-
-        // Append the card to the content container
-        contentContainer.appendChild(card);
+        contentHTML += `
+        <div class="card">
+          <h2>${item.title}</h2>
+          <img src="${item.imgpath}" alt="${item.title} Image">
+          <p>${item.description}</p>
+        </div>
+      `;
     });
+
+    // Set the content container's innerHTML with the built string
+    contentContainer.innerHTML = contentHTML;
 });
 
 
