@@ -54,19 +54,32 @@ function search() {
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
-    // Build the HTML string dynamically
-    let contentHTML = '';
-    allItems.forEach(item => {
-        contentHTML += `
-        <div class="card">
-          <img src="${item.imgpath}" alt="${item.title} Image">
-          <p>${item.description}</p>
-        </div>
-      `;
-    });
+    // Function to display all items, ensuring new ones are added first
+    function displayAllItems() {
+        contentContainer.innerHTML = ""; // Clear existing content
 
-    // Set the content container's innerHTML with the built string
-    contentContainer.innerHTML = contentHTML;
+        // Reverse the allItems array to add new items at the beginning
+        allItems.reverse().forEach(item => {
+            contentHTML += `
+          <div class="card">
+            <h2>${item.title}</h2>
+            <img src="${item.imgpath}" alt="${item.title} Image">
+            <p>${item.description}</p>
+          </div>
+        `;
+        });
+
+        contentContainer.innerHTML = contentHTML;
+    }
+
+    // Initial display
+    displayAllItems();
+
+    // Example function to add a new item
+    function addNewItem(newItem) {
+        allItems.unshift(newItem); // Insert at the beginning of the array
+        displayAllItems(); // Re-render the items
+    }
 });
 
 
