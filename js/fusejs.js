@@ -25,7 +25,7 @@ const allItems = [
 ];
 
 
-
+const relativePath = item.path || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -46,7 +46,6 @@ function search() {
 
         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = item.path || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
         resultElement.innerHTML = `<a href="pages/${relativePath}.html">${result.title}</a>`;
 
         searchResults.appendChild(resultElement);
