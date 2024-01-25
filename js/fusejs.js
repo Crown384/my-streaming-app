@@ -2,34 +2,60 @@ const allItems = [
     { id: 1, title: 'Sermons List', keywords: ['keyword1', 'keyword2'] },
     { id: 2, title: '_SeTTings', keywords: ['keyword3', 'keyword4'] },
     // ... more items
- ];
- 
- function search() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
+];
+
+function search() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
- 
+
     // Clear previous results
     searchResults.innerHTML = '';
- 
+
     // Filter items based on the search input and keywords
     const results = allItems.filter(item => {
         const titleMatch = item.title.toLowerCase().includes(searchInput);
         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
         return titleMatch || keywordMatch;
     });
- 
+
     // Display results
     results.forEach(result => {
         const resultElement = document.createElement('div');
- 
+
         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
         resultElement.innerHTML = `<a href="pages/${encodeURIComponent(formattedTitle)}.html">${result.title}</a>`;
- 
+
         searchResults.appendChild(resultElement);
     });
- }
- 
+}
+
+//  function search() {
+//     const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
+//     const searchResults = document.getElementById('searchResults');
+
+//     // Clear previous results
+//     searchResults.innerHTML = '';
+
+//     // Filter items based on the search input and keywords
+//     const results = allItems.filter(item => {
+//         const titleMatch = item.title.toLowerCase().includes(searchInput);
+//         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
+//         return titleMatch || keywordMatch;
+//     });
+
+//     // Display results
+//     results.forEach(result => {
+//         const resultElement = document.createElement('div');
+
+//         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
+//         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
+//         resultElement.innerHTML = `<a href="pages/${encodeURIComponent(formattedTitle)}.html">${result.title}</a>`;
+
+//         searchResults.appendChild(resultElement);
+//     });
+//  }
+
 
 
 //hjbkjbvkjbkjbjkbjkbkjb
