@@ -1,11 +1,10 @@
 
-
-// Sample data (replace this with your actual data)
 const allItems = [
-    { id: 1, name: 'Item 1' },
-    { id: 2, name: 'Item 2' },
+    { id: 1, title: 'Page 1', keywords: ['keyword1', 'keyword2'] },
+    { id: 2, title: 'Page 2', keywords: ['keyword3', 'keyword4'] },
     // ... more items
 ];
+
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -13,16 +12,19 @@ function search() {
     // Clear previous results
     searchResults.innerHTML = '';
 
-    // Filter items based on the search input
-    const results = allItems.filter(item => item.name.toLowerCase().includes(searchInput));
+    // Filter items based on the search input and keywords
+    const results = allItems.filter(item => {
+        const titleMatch = item.title.toLowerCase().includes(searchInput);
+        const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
+        return titleMatch || keywordMatch;
+    });
 
     // Display results
     results.forEach(result => {
         const resultElement = document.createElement('div');
-        resultElement.textContent = result.name;
 
-        // Add a link to the specific page using the item's id
-        resultElement.innerHTML = `<a href="#page${result.id}">${result.name}</a>`;
+        // Generate links based on the title of the page
+        resultElement.innerHTML = `<a href="pages/${encodeURIComponent(result.title)}.html">${result.title}</a>`;
 
         searchResults.appendChild(resultElement);
     });
