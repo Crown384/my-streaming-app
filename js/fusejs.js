@@ -12,7 +12,7 @@ const allItems = [
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
         description: 'Description of the sermons list page LATEST', // Added description
-        path: "playlists/test.html"
+        path: "playlists/test"
     },
     {
         id: 1,
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     allItems.forEach(item => {
         const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = item.path || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
+        const relativePath = 'pages/' + item.path + '.html' || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
 
         contentHTML += `
             <div class="card scroller-elements dynamic-elements">
