@@ -1,38 +1,22 @@
-// const allItems = [
-//     {
-//         id: 1,
-//         title: 'Sermons List',
-//         keywords: ['keyword1', 'keyword2'],
-//         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-//         description: 'Description of the sermons list page' // Added description
-//     },
-//     {
-//         id: 2,
-//         title: '_SeTTings',
-//         keywords: ['keyword3', 'keyword4'],
-//         imgpath: 'path/to/settings-image.png', // Added imgpath
-//         description: 'Description of the settings page' // Added description
-//     },
-//     // ... more items with imgpath and description added
-// ];
-
 const allItems = [
     {
         id: 1,
-        items: [
-            { title: 'Sermons List', imgpath: 'path-to-img1', description: 'Description for Sermons List' },
-            // Additional items for ID 1
-        ]
+        title: 'Sermons List',
+        keywords: ['keyword1', 'keyword2'],
+        imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
+        description: 'Description of the sermons list page' // Added description
     },
     {
         id: 2,
-        items: [
-            { title: '_SeTTings', imgpath: 'path-to-img2', description: 'Description for _SeTTings' },
-            // Additional items for ID 2
-        ]
+        title: '_SeTTings',
+        keywords: ['keyword3', 'keyword4'],
+        imgpath: 'path/to/settings-image.png', // Added imgpath
+        description: 'Description of the settings page' // Added description
     },
-    // ... more groups
+    // ... more items with imgpath and description added
 ];
+
+
 
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
@@ -60,31 +44,43 @@ function search() {
     });
 }
 
+const contentContainer = document.getElementById("content-container"); // Target container
 
-document.addEventListener("DOMContentLoaded", function () {
-    const contentContainer = document.getElementById('content-container');
+function displayAllItems() {
+    contentContainer.innerHTML = ""; // Clear existing content
 
-    // Loop through each group in the allItems array
-    allItems.forEach(group => {
-        // Loop through each item in the group
-        group.items.forEach(item => {
-            // Create a content card for each item
-            const card = document.createElement('div');
-            card.className = 'card';
+    allItems.forEach(item => {
+        const itemElement = document.createElement("div"); // Container for each item
 
-            // Add content based on the item properties
-            card.innerHTML = `
-                <h2>${item.title}</h2>
-                <img src="${item.imgpath}" alt="${item.title} Image">
-                <p>${item.description}</p>
-            `;
+        // Create elements for title, image, and description
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = item.title;
 
-            // Append the card to the content container
-            contentContainer.appendChild(card);
-        });
+        const imgElement = document.createElement("img");
+        imgElement.src = item.imgpath;
+        imgElement.alt = item.title; // Alternative text for accessibility
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.textContent = item.description;
+
+        // Append elements to the item container
+        itemElement.appendChild(titleElement);
+        itemElement.appendChild(imgElement);
+        itemElement.appendChild(descriptionElement);
+
+        // Add the item container to the beginning of the content container
+        contentContainer.prepend(itemElement);
     });
-});
+}
 
+// Initial display
+displayAllItems();
+
+// Function to add a new item (example)
+function addNewItem(newItem) {
+    allItems.unshift(newItem);
+    displayAllItems();
+}
 
 //  function search() {
 //     const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
