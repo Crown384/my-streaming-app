@@ -1,9 +1,20 @@
 const allItems = [
-    { id: 1, title: 'Sermons List', keywords: ['keyword1', 'keyword2'] },
-    { id: 2, title: '_SeTTings', keywords: ['keyword3', 'keyword4'] },
-    // ... more items
+    {
+        id: 1,
+        title: 'Sermons List',
+        keywords: ['keyword1', 'keyword2'],
+        imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
+        description: 'Description of the sermons list page' // Added description
+    },
+    {
+        id: 2,
+        title: '_SeTTings',
+        keywords: ['keyword3', 'keyword4'],
+        imgpath: 'path/to/settings-image.png', // Added imgpath
+        description: 'Description of the settings page' // Added description
+    },
+    // ... more items with imgpath and description added
 ];
-
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -28,6 +39,45 @@ function search() {
 
         searchResults.appendChild(resultElement);
     });
+}
+
+
+const contentContainer = document.getElementById("content-container"); // Target container
+
+function displayAllItems() {
+    contentContainer.innerHTML = ""; // Clear existing content
+
+    allItems.forEach(item => {
+        const itemElement = document.createElement("div"); // Container for each item
+
+        // Create elements for title, image, and description
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = item.title;
+
+        const imgElement = document.createElement("img");
+        imgElement.src = item.imgpath;
+        imgElement.alt = item.title; // Alternative text for accessibility
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.textContent = item.description;
+
+        // Append elements to the item container
+        itemElement.appendChild(titleElement);
+        itemElement.appendChild(imgElement);
+        itemElement.appendChild(descriptionElement);
+
+        // Add the item container to the beginning of the content container
+        contentContainer.prepend(itemElement);
+    });
+}
+
+// Initial display
+displayAllItems();
+
+// Function to add a new item (example)
+function addNewItem(newItem) {
+    allItems.unshift(newItem);
+    displayAllItems();
 }
 
 
