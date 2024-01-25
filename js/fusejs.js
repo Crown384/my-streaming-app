@@ -7,11 +7,18 @@ const allItems = [
         description: 'Description of the sermons list page' // Added description
     },
     {
+        id: 1,
+        title: 'Latest',
+        keywords: ['keyword1', 'keyword2'],
+        imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
+        description: 'Description of the sermons list page' // Added description
+    },
+    {
         id: 2,
         title: '_SeTTings',
         keywords: ['keyword3', 'keyword4'],
-        imgpath: 'path/to/settings-image.png', // Added imgpath
-        description: 'Description of the settings page' // Added description
+        imgpath: 'https://i0.wp.com/impactconnect.com.ng/wp-content/uploads/2024/01/PROPHETIC_AND_IMPARTATION_SERVICE_A_CHARGE_KOINONIA_ABUJA_2023_WITH-mp3-image.jpg?resize=780%2C470&ssl=1', // Added imgpath
+        description: 'Propehtic and Impartation service' // Added description
     },
     // ... more items with imgpath and description added
 ];
@@ -52,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     allItems.forEach(item => {
         contentHTML += `
         <div class="card">
-          <h2>${item.title}</h2>
           <img src="${item.imgpath}" alt="${item.title} Image">
           <p>${item.description}</p>
         </div>
