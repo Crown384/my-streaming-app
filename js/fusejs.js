@@ -54,39 +54,22 @@ function search() {
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
-    // Function to display all items, prepending new ones
-    function displayAllItems() {
-        let contentHTML = ''; // Build HTML string dynamically
+    // Build the HTML string dynamically
+    let contentHTML = '';
+    allItems.forEach(item => {
+        contentHTML += `
+        <div class="card">
+          <h2>${item.title}</h2>
+          <img src="${item.imgpath}" alt="${item.title} Image">
+          <p>${item.description}</p>
+        </div>
+      `;
+    });
 
-        allItems.forEach(item => {
-            contentHTML += `
-          <div class="card">
-            <h2>${item.title}</h2>
-            <img src="${item.imgpath}" alt="${item.title} Image">
-            <p>${item.description}</p>
-          </div>
-        `;
-        });
-
-        // Wrap the HTML string in a temporary element
-        const tempElement = document.createElement('div');
-        tempElement.innerHTML = contentHTML;
-
-        // Prepend all child elements of the temporary element to the container
-        while (tempElement.firstChild) {
-            contentContainer.prepend(tempElement.firstChild);
-        }
-    }
-
-    // Initial display
-    displayAllItems();
-
-    // Example function to add a new item
-    function addNewItem(newItem) {
-        allItems.unshift(newItem); // Insert at the beginning of the array
-        displayAllItems(); // Re-render the items
-    }
+    // Set the content container's innerHTML with the built string
+    contentContainer.innerHTML = contentHTML;
 });
+
 
 
 //  function search() {
