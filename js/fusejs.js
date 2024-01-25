@@ -11,7 +11,7 @@ const allItems = [
         title: 'Latest',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-        description: 'Description of the sermons list page' // Added description
+        description: 'Description of the sermons list page LATEST' // Added description
     },
     {
         id: 2,
