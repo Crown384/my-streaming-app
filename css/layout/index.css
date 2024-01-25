@@ -42,6 +42,17 @@ section {
     border: 2px solid #09C8F5;
 }
 
+/* DYNAMIC CONTENT */
+
+.dynamic-scroller {
+    grid-auto-columns: 30%;
+}
+
+.scroller .dynamic-elements a img{
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
 /* SERMONS scroller */
 .sermons-scroller {
     grid-auto-columns: 44%;
