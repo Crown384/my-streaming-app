@@ -50,27 +50,28 @@ function search() {
         searchResults.appendChild(resultElement);
     });
 }
-
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
 
     // Build the HTML string dynamically
     let contentHTML = '';
-    const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
     allItems.forEach(item => {
+        const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
+
         contentHTML += `
-        <div class="card scroller-elements dynamic-elements">
-        <a href="pages/${encodeURIComponent(formattedTitle)}.html">
-            <img src="${item.imgpath}" alt="${item.title} Image">
-        </a>;
-          <p>${item.description}</p>
-        </div>
-      `;
+            <div class="card scroller-elements dynamic-elements">
+                <a href="pages/${encodeURIComponent(formattedTitle)}.html">
+                    <img src="${item.imgpath}" alt="${item.title} Image">
+                </a>
+                <p>${item.description}</p>
+            </div>
+        `;
     });
 
     // Set the content container's innerHTML with the built string
     contentContainer.innerHTML = contentHTML;
 });
+
 
 
 
