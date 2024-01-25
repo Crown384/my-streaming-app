@@ -9,49 +9,49 @@ body {
 
 /* UNIVERSAL */
 
-section {
+/* section {
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     padding-left: 10px;
     padding-top: 10px;
-}
+} */
 
-.scroller {
+/* .scroller {
     display: grid;
     grid-auto-flow: column;
-}
+} */
 
 /* testing */
-.scroller-elements {
+/* .scroller-elements {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0px;
-}
+} */
 
-.scroller a {
+/* .scroller a {
     width: 100%;
-}
+} */
 
-.scroller a img {
+/* .scroller a img {
     width: 100%;
     object-fit: cover;
     object-position: center;
     border: 2px solid #09C8F5;
-}
+} */
 
 /* DYNAMIC CONTENT */
 
-.dynamic-scroller {
+/* .dynamic-scroller {
     grid-auto-columns: 30%;
 }
 
 .scroller .dynamic-elements a img{
     aspect-ratio: 16/9;
     border-radius: 10px;
-}
+} */
 
 /* SERMONS scroller */
 .sermons-scroller {
