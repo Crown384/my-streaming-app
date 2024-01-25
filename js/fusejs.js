@@ -56,9 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Build the HTML string dynamically
     let contentHTML = '';
+    const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
     allItems.forEach(item => {
         contentHTML += `
         <div class="card">
+        <a href="pages/${encodeURIComponent(formattedTitle)}.html">
+            <img src="${item.imgpath}" alt="${item.title} Image">
+        </a>;
           <img src="${item.imgpath}" alt="${item.title} Image">
           <p>${item.description}</p>
         </div>
