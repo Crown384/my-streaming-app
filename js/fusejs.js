@@ -53,7 +53,7 @@ function search() {
     });
 }
 
-// 
+// DYNAMIC-CONTENT
 
 
 document.addEventListener("DOMContentLoaded", function () {
