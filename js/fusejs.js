@@ -1,4 +1,38 @@
 
+
+// Sample data (replace this with your actual data)
+const allItems = [
+    { id: 1, name: 'Item 1' },
+    { id: 2, name: 'Item 2' },
+    // ... more items
+];
+
+function search() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const searchResults = document.getElementById('searchResults');
+
+    // Clear previous results
+    searchResults.innerHTML = '';
+
+    // Filter items based on the search input
+    const results = allItems.filter(item => item.name.toLowerCase().includes(searchInput));
+
+    // Display results
+    results.forEach(result => {
+        const resultElement = document.createElement('div');
+        resultElement.textContent = result.name;
+        searchResults.appendChild(resultElement);
+    });
+}
+
+
+
+
+
+
+//hjbkjbvkjbkjbjkbjkbkjb
+
+
 // Include Fuse.js (can also be loaded from a local file)
 const fuse = require('fuse.js');
 
