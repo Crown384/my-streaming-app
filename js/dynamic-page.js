@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const pagesFolder = 'pages/';
+    const pagesFolder = '/pages/';
 
     // Fetch the list of HTML files in the 'pages' folder
     fetch(`${pagesFolder}?t=${new Date().getTime()}`)
