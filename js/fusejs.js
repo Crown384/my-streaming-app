@@ -44,43 +44,28 @@ function search() {
     });
 }
 
-const contentContainer = document.getElementById("content-container"); // Target container
 
-function displayAllItems() {
-    contentContainer.innerHTML = ""; // Clear existing content
+document.addEventListener("DOMContentLoaded", function () {
+    const contentContainer = document.getElementById('content-container');
 
+    // Loop through each item in the allItems array
     allItems.forEach(item => {
-        const itemElement = document.createElement("div"); // Container for each item
+        // Create a content card for each item
+        const card = document.createElement('div');
+        card.className = 'card';
 
-        // Create elements for title, image, and description
-        const titleElement = document.createElement("h2");
-        titleElement.textContent = item.title;
+        // Add content based on the item properties
+        card.innerHTML = `
+            <h2>${item.title}</h2>
+            <img src="${item.imgpath}" alt="${item.title} Image">
+            <p>${item.description}</p>
+        `;
 
-        const imgElement = document.createElement("img");
-        imgElement.src = item.imgpath;
-        imgElement.alt = item.title; // Alternative text for accessibility
-
-        const descriptionElement = document.createElement("p");
-        descriptionElement.textContent = item.description;
-
-        // Append elements to the item container
-        itemElement.appendChild(titleElement);
-        itemElement.appendChild(imgElement);
-        itemElement.appendChild(descriptionElement);
-
-        // Add the item container to the beginning of the content container
-        contentContainer.prepend(itemElement);
+        // Append the card to the content container
+        contentContainer.appendChild(card);
     });
-}
+});
 
-// Initial display
-displayAllItems();
-
-// Function to add a new item (example)
-function addNewItem(newItem) {
-    allItems.unshift(newItem);
-    displayAllItems();
-}
 
 //  function search() {
 //     const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
