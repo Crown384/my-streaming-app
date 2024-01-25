@@ -4,16 +4,8 @@ const allItems = [
     // ... more items
 ];
 
-// Reference to the search input
-const searchInput = document.getElementById('searchInput');
-
-// Event listener for the input event
-searchInput.addEventListener('input', function () {
-    search();
-});
-
 function search() {
-    const searchInputValue = searchInput.value.toLowerCase();
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
 
     // Clear previous results
@@ -21,8 +13,8 @@ function search() {
 
     // Filter items based on the search input and keywords
     const results = allItems.filter(item => {
-        const titleMatch = item.title.toLowerCase().includes(searchInputValue);
-        const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInputValue));
+        const titleMatch = item.title.toLowerCase().includes(searchInput);
+        const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
         return titleMatch || keywordMatch;
     });
 
@@ -37,6 +29,7 @@ function search() {
         searchResults.appendChild(resultElement);
     });
 }
+
 
 //  function search() {
 //     const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
