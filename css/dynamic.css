@@ -1,0 +1,16 @@
+ @media screen and (min-width: 320px) {
+    .dynamic-content {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 30%;
+    }
+
+    .dynamic-content .card img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 10px;
+    }
+ }

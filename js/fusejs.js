@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     allItems.forEach(item => {
         contentHTML += `
         <div class="card">
-          <h2>${item.title}</h2>
           <img src="${item.imgpath}" alt="${item.title} Image">
           <p>${item.description}</p>
         </div>
