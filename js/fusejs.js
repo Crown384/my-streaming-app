@@ -1,37 +1,35 @@
-
 const allItems = [
-    { id: 1, title: 'Sermons', keywords: ['keyword1', 'keyword2'] },
-    { id: 2, title: '_settings', keywords: ['keyword3', 'keyword4'] },
+    { id: 1, title: 'Page 1', keywords: ['keyword1', 'keyword2'] },
+    { id: 2, title: 'Page 2', keywords: ['keyword3', 'keyword4'] },
     // ... more items
-];
-
-function search() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+ ];
+ 
+ function search() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
     const searchResults = document.getElementById('searchResults');
-
+ 
     // Clear previous results
     searchResults.innerHTML = '';
-
+ 
     // Filter items based on the search input and keywords
     const results = allItems.filter(item => {
         const titleMatch = item.title.toLowerCase().includes(searchInput);
         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
         return titleMatch || keywordMatch;
     });
-
+ 
     // Display results
     results.forEach(result => {
         const resultElement = document.createElement('div');
-
-        // Generate links based on the title of the page
-        resultElement.innerHTML = `<a href="pages/${encodeURIComponent(result.title)}.html">${result.title}</a>`;
-
+ 
+        // Generate links based on the lowercase title of the page
+        const lowercasedTitle = result.title.toLowerCase();
+        resultElement.innerHTML = `<a href="pages/${encodeURIComponent(lowercasedTitle)}.html">${result.title}</a>`;
+ 
         searchResults.appendChild(resultElement);
     });
-}
-
-
-
+ }
+ 
 
 
 
