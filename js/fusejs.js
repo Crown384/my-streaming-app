@@ -1,6 +1,6 @@
 const allItems = [
-    { id: 1, title: 'Sermons list', keywords: ['keyword1', 'keyword2'] },
-    { id: 2, title: '_settings', keywords: ['keyword3', 'keyword4'] },
+    { id: 1, title: 'Page 1', keywords: ['keyword1', 'keyword2'] },
+    { id: 2, title: 'High Tower', keywords: ['keyword3', 'keyword4'] },
     // ... more items
  ];
  
@@ -22,16 +22,14 @@ const allItems = [
     results.forEach(result => {
         const resultElement = document.createElement('div');
  
-        // Generate links based on the lowercase title of the page && replaces spaces with hyphen
+        // Generate links based on the lowercase title of the page, replacing spaces with hyphens
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        resultElement.innerHTML = `<a href="pages/${encodeURIComponent(lowercasedTitle)}.html">${result.title}</a>`;
+        resultElement.innerHTML = `<a href="pages/${encodeURIComponent(formattedTitle)}.html">${result.title}</a>`;
  
         searchResults.appendChild(resultElement);
     });
  }
  
-
-
 
 
 //hjbkjbvkjbkjbjkbjkbkjb
