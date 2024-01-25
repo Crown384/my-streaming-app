@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
     allItems.forEach(item => {
         contentHTML += `
-        <div class="card scroller-elements dynamic-elements">
+        <div class="card">
         <a href="pages/${encodeURIComponent(formattedTitle)}.html">
             <img src="${item.imgpath}" alt="${item.title} Image">
         </a>;
