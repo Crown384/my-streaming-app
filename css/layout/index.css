@@ -49,9 +49,8 @@ section {
 }
 
 .scroller .dynamic-elements a img{
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
     border-radius: 10px;
-    width: 100px;
 }
 
 /* SERMONS scroller */
