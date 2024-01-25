@@ -1,6 +1,6 @@
 const allItems = [
-    { id: 1, title: 'Page 1', keywords: ['keyword1', 'keyword2'] },
-    { id: 2, title: 'High Tower', keywords: ['keyword3', 'keyword4'] },
+    { id: 1, title: 'Sermons List', keywords: ['keyword1', 'keyword2'] },
+    { id: 2, title: '_SeTTings', keywords: ['keyword3', 'keyword4'] },
     // ... more items
  ];
  
