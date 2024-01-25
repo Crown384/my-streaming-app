@@ -1,7 +1,7 @@
 
 const allItems = [
-    { id: 1, title: 'Page 1', keywords: ['keyword1', 'keyword2'] },
-    { id: 2, title: 'Page 2', keywords: ['keyword3', 'keyword4'] },
+    { id: 1, title: 'Sermons', keywords: ['keyword1', 'keyword2'] },
+    { id: 2, title: '_settings', keywords: ['keyword3', 'keyword4'] },
     // ... more items
 ];
 
