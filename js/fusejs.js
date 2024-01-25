@@ -1,5 +1,11 @@
 
 
+// Sample data (replace this with your actual data)
+const allItems = [
+    { id: 1, name: 'Item 1' },
+    { id: 2, name: 'Item 2' },
+    // ... more items
+];
 function search() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -21,6 +27,9 @@ function search() {
         searchResults.appendChild(resultElement);
     });
 }
+
+
+
 
 
 
