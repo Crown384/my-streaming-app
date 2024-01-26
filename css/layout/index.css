@@ -18,7 +18,7 @@ section {
 
     padding-left: 10px;
     padding-top: 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .scroller {
