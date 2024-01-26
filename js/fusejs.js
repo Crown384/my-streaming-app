@@ -48,7 +48,7 @@ function search() {
 
         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = result.path || 'pages/' + formattedTitle + '.html'; // Use relative path from result object
+        const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html'); // Use relative path from result object
 
         resultElement.innerHTML = `<a href="${relativePath}">${result.title}</a>`;
         searchResults.appendChild(resultElement);
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     allItems.forEach(item => {
         const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = 'pages/' + item.path + '.html' || 'pages/' + formattedTitle + '.html'; // Use relative path from item object
+        const relativePath = ('pages/' + item.path + '.html') || ('pages/' + formattedTitle + '.html'); // Use relative path from item object
 
         contentHTML += `
             <div class="card scroller-elements dynamic-elements">
