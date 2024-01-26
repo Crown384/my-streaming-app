@@ -1,0 +1,8 @@
+.input-box {
+    justify-self: center;
+    width: 70%;
+    height: 20px;
+    border: 2px solid whitesmoke;
+
+    border-radius: 22px;
+}

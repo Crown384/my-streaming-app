@@ -9,6 +9,12 @@
     <script src="/js/fusejs.js"></script>
     <link rel="stylesheet" href="/css/_style.css">
 
+    <style>
+        main {
+            display: grid;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +22,8 @@
 
     </header>
     <main>
-
+        <input type="text" id="searchInput" placeholder="Search..." oninput="search()" class="input-box">
+        <div id="searchResults" class="searchResults"></div>
     </main>
     <footer>
         <!-- Home -->
