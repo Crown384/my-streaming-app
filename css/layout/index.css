@@ -16,8 +16,6 @@ section {
     flex-direction: column;
     gap: 10px;
 
-    padding-left: 10px;
-    padding-top: 10px;
     /* overflow-x: scroll; */
 }
 
