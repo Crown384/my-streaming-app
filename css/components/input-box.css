@@ -19,7 +19,7 @@
     outline: none;
 }
 
-.innerHTML > img {
+.innerHTML img {
     width: 60px;
     aspect-ratio: 1/1;
     object-fit: cover;
