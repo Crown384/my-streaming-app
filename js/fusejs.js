@@ -15,14 +15,6 @@ const allItems = [
         description: 'Description of the sermons list page LATEST', // Added description
         path: "playlists/test"
     },
-    {
-        id: 1,
-        title: '_SeTTings',
-        keywords: ['keyword3', 'keyword4'],
-        imgpath: 'https://i0.wp.com/impactconnect.com.ng/wp-content/uploads/2024/01/PROPHETIC_AND_IMPARTATION_SERVICE_A_CHARGE_KOINONIA_ABUJA_2023_WITH-mp3-image.jpg?resize=780%2C470&ssl=1', // Added imgpath
-        description: 'Propehtic and Impartation service', // Added description
-        path: "_settings",
-    },
     // ... more items with imgpath and description added
 ];
 
