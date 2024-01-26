@@ -18,3 +18,10 @@
     border: 0.5px solid white;
     outline: none;
 }
+
+.innerHTML {
+    width: 60px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}

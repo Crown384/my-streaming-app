@@ -42,7 +42,8 @@ function search() {
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
         const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html'); // Use relative path from result object
 
-        resultElement.innerHTML = `<a href="${relativePath}">${result.title}</a>`;
+        resultElement.innerHTML = `<img src="${item.imgpath}" class="innerHTML" alt="${item.title} image">
+        <a href="${relativePath}">${result.title}</a>`;
         searchResults.appendChild(resultElement);
     });
 }
