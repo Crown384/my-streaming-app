@@ -36,3 +36,7 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.searchResults {
+    width: 70%;
+}
