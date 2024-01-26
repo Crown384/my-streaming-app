@@ -41,7 +41,9 @@ function search() {
         // Create the innerHTML structure with a class for styling
         const resultHTML = `
         <div class="innerHTML">
-            <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
+            <a href="${relativePath}">
+                <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
+            </a>
             <a href="${relativePath}">${result.title}</a>
         </div>
     `;
