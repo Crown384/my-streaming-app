@@ -2,7 +2,7 @@
     width: 100%;
 
     display: grid;
-    justify-self: center;
+    justify-items: center;
 }
 
 .search-container input {
