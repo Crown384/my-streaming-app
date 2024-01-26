@@ -21,7 +21,7 @@ html {
 }
 
 html {
-    overscroll-behavior: contain;
+    /* overscroll-behavior: contain; */
     scroll-behavior: smooth;
 
     background-color: var(--bg-color);
