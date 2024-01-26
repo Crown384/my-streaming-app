@@ -28,9 +28,10 @@
 
 .innerHTML {
     width: 100%;
-    height: 30px;
+    height: 100px;
     display: flex;
     gap: 5px;
+    background-color: bisque;
 
     align-items: center;
     justify-content: flex-start;
