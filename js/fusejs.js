@@ -34,16 +34,20 @@ function search() {
         return titleMatch || keywordMatch;
     });
 
-    // Display results
-    results.forEach(result => {
-        const resultElement = document.createElement('div');
-
-        // Generate links based on the lowercase title of the page, replacing spaces with hyphens
+    allItems.forEach(result => {
         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html'); // Use relative path from result object
+        const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html');
 
-        resultElement.innerHTML = `<a href="${relativePath}">${result.title}</a>`;
-        searchResults.appendChild(resultElement);
+        // Create the innerHTML structure with a class for styling
+        const resultHTML = `
+        <div class="innerHTML">
+            <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
+            <a href="${relativePath}">${result.title}</a>
+        </div>
+    `;
+
+        // Append the resultHTML to the search results container
+        searchResults.innerHTML += resultHTML;
     });
 }
 
