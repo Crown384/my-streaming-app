@@ -15,7 +15,7 @@ section {
     gap: 10px;
     margin-left: 15px;
     margin-top: 15px;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
 }
 
 .scroller {
