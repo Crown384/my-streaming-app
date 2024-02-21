@@ -10,12 +10,12 @@ body {
 /* UNIVERSAL */
 
 section {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: 15px;
-    margin-top: 15px;
-    overflow-x: scroll;
+    /* margin-left: 15px; */
+    /* margin-top: 15px;
+    overflow-x: scroll; */
 }
 
 .scroller {
