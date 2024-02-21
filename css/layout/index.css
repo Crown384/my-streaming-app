@@ -18,82 +18,15 @@ section {
     overflow-x: scroll; */
 }
 
-.scroller {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 10px;
-}
-
-/* testing */
-.scroller-elements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
-}
-
-.scroller a {
-    width: 100%;
-}
-
-.scroller a img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    border: 2px solid #09C8F5;
-}
-
 /* DYNAMIC CONTENT */
 
-.dynamic-scroller {
+/* .dynamic-scroller {
     grid-auto-columns: 30%;
 }
 
 .scroller .dynamic-elements a img{
     aspect-ratio: 16/9;
     border-radius: 10px;
-}
-
-/* SERMONS scroller */
-.sermons-scroller {
-    grid-auto-columns: 44%;
-}
-
-.scroller .sermon-elements a img{
-    aspect-ratio: 8/5;
-    border-radius: 10px;
-}
-
-
-/* SERIES scroller */
-.scroller .series-elements a img {
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-}
-
-.series-scroller {
-    grid-auto-columns: 33%;
-}
-
-
-/* GALLERY scroller */
-.scroller .gallery-elements a img {
-    aspect-ratio: 1/1.5;
-    border-radius: 10px;
-}
-
-.gallery-scroller {
-    grid-auto-columns: 28%;
-}
-
-
-/* Paragraph stylying */
-.scroller p,
-.truncated-text {
-    font-size: 10px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+} */
 
 /* FOOTER styling */
