@@ -1,10 +1,17 @@
 const allItems = [
     {
+        title: 'Sermons List',
+        keywords: ['keyword1', 'keyword2'],
+        imgpath: 'https://i.ytimg.com/vi/ezX-Ngwznho/hqdefault.jpg', // Added imgpath
+        description: 'Altar Basic Definition', // Added description
+        path: "singlePlay/altar-basic-definition"
+    },
+    {
         id: 3,
         title: 'Sermons List',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-        description: 'Description of the sermons list page', // Added description
+        description: 'list page', // Added description
         path: "sermons-list"
     },
     {
@@ -12,7 +19,7 @@ const allItems = [
         title: 'Latest',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-        description: 'Description of the sermons list page LATEST', // Added description
+        description: 'the sermons list page LATEST', // Added description
         path: "playlists/test"
     },
     // ... more items with imgpath and description added
