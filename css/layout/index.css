@@ -1,7 +1,7 @@
 body {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: 50px auto 50px;
+    /* grid-auto-flow: row;
+    grid-template-rows: 50px auto 50px; */
 }
 
 

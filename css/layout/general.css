@@ -16,12 +16,12 @@
 
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        /* align-items: center; */
         background: linear-gradient();
     }
 
     main {
-        min-height: 100vh;
+        min-height: 80vh;
 
     }
 
