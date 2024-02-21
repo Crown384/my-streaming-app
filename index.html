@@ -15,6 +15,25 @@
     <link rel="stylesheet" href="/css/_style.css">
 </head>
 
+<style>
+    .scroller {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 30%;
+        overflow: scroll;
+    }
+
+    .scroller > * {
+        display: grid;
+        place-items: center;
+    }
+
+    .scroller > * > a > img {
+        width: 80%;
+        aspect-ratio: 16/9;
+    }
+</style>
+
 <body>
     <header>
 
