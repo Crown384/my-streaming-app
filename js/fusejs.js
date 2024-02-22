@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="${relativePath}">
                     <img src="${item.imgpath}" alt="${item.title} Image">
                 </a>
-                <p>${item.description}</p>
+                <p>${item.title}</p>
             </div>
         `;
     });
