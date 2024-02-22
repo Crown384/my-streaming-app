@@ -1,6 +1,13 @@
 const allItems = [
     {
-        title: 'Sermons List',
+        title: 'Science of Altars: Beauty of Substitution',
+        keywords: ['keyword1', 'keyword2'],
+        imgpath: 'https://i.ytimg.com/vi/mgnUXY9cp70/hqdefault.jpg', // Added imgpath
+        description: 'Altar Basic Definition', // Added description
+        path: "singlePlay/science-of-altars-beauty-of-substitution"
+    },
+    {
+        title: 'Altar: Basic Definition',
         keywords: ['keyword1', 'keyword2'],
         imgpath: 'https://i.ytimg.com/vi/ezX-Ngwznho/hqdefault.jpg', // Added imgpath
         description: 'Altar Basic Definition', // Added description
