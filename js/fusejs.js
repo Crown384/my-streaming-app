@@ -81,41 +81,7 @@ function search() {
 searchInput.addEventListener('input', search); // Fires on every keystroke
 
 
-// function search() {
-//     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-//     const searchResults = document.getElementById('searchResults');
 
-//     // Clear previous results
-//     searchResults.innerHTML = '';
-
-//     // Filter items based on the search input and keywords
-//     const results = allItems.filter(item => {
-//         const titleMatch = item.title.toLowerCase().includes(searchInput);
-//         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
-//         return titleMatch || keywordMatch;
-//     });
-
-//     allItems.forEach(result => {
-//         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-//         const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html');
-
-//         // Create the innerHTML structure with a class for styling
-//         const resultHTML = `
-//         <div class="innerHTML">
-//             <a href="${relativePath}">
-//                 <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
-//             </a>
-//             <a href="${relativePath}">${result.title}</a>
-//         </div>
-//     `;
-
-//         // Append the resultHTML to the search results container
-//         searchResults.innerHTML += resultHTML;
-//     });
-// }
-
-
-// DYNAMIC-CONTENT
 
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.getElementById('content-container');
