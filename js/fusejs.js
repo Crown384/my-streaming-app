@@ -34,38 +34,86 @@ const allItems = [
 
 // SEARCH FUNCTION
 
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
 function search() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const searchResults = document.getElementById('searchResults');
+  const searchQuery = searchInput.value.toLowerCase().trim(); // Trim leading/trailing spaces
 
-    // Clear previous results
-    searchResults.innerHTML = '';
+  // Clear previous results
+  searchResults.innerHTML = '';
 
-    // Filter items based on the search input and keywords
-    const results = allItems.filter(item => {
-        const titleMatch = item.title.toLowerCase().includes(searchInput);
-        const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
-        return titleMatch || keywordMatch;
+  if (!searchQuery) {
+    return; // No need to filter or render if search query is empty
+  }
+
+  const filteredItems = allItems.filter(item => {
+    const searchWords = searchQuery.split(/\s+/); // Split search query into individual words
+    const itemKeywords = item.keywords || []; // Handle potential absence of keywords
+    const itemTitle = item.title.toLowerCase();
+    const itemDescription = item.description.toLowerCase() || ''; // Handle potential absence of description
+
+    const matchesAllWords = searchWords.every(word => {
+      // Check for word matches in title, keywords, and description
+      return itemTitle.includes(word) || itemKeywords.some(keyword => keyword.includes(word)) || itemDescription.includes(word);
     });
 
-    allItems.forEach(result => {
-        const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html');
+    return matchesAllWords; // Return true only if all search words are matched
+  });
 
-        // Create the innerHTML structure with a class for styling
-        const resultHTML = `
-        <div class="innerHTML">
-            <a href="${relativePath}">
-                <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
-            </a>
-            <a href="${relativePath}">${result.title}</a>
-        </div>
+  // Render search results (adapt HTML structure as needed)
+  searchResults.innerHTML = filteredItems.map(item => {
+    const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
+    const relativePath = `pages/${item.path}.html`; // Assuming path structure
+
+    return `
+      <div class="search-result">
+        <a href="${relativePath}">
+          <img src="${item.imgpath}" alt="${item.title}" class="search-result-image">
+          <h3 class="search-result-title">${item.title}</h3>
+          <p class="search-result-description">${item.description}</p>
+        </a>
+      </div>
     `;
-
-        // Append the resultHTML to the search results container
-        searchResults.innerHTML += resultHTML;
-    });
+  }).join('');
 }
+
+// Add event listener to search input (adapt event type as needed)
+searchInput.addEventListener('input', search); // Fires on every keystroke
+
+
+// function search() {
+//     const searchInput = document.getElementById('searchInput').value.toLowerCase();
+//     const searchResults = document.getElementById('searchResults');
+
+//     // Clear previous results
+//     searchResults.innerHTML = '';
+
+//     // Filter items based on the search input and keywords
+//     const results = allItems.filter(item => {
+//         const titleMatch = item.title.toLowerCase().includes(searchInput);
+//         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
+//         return titleMatch || keywordMatch;
+//     });
+
+//     allItems.forEach(result => {
+//         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
+//         const relativePath = ('/pages/' + result.path + '.html') || ('pages/' + formattedTitle + '.html');
+
+//         // Create the innerHTML structure with a class for styling
+//         const resultHTML = `
+//         <div class="innerHTML">
+//             <a href="${relativePath}">
+//                 <img src="${result.imgpath}" class="innerHTMLimg" alt="${result.title}">
+//             </a>
+//             <a href="${relativePath}">${result.title}</a>
+//         </div>
+//     `;
+
+//         // Append the resultHTML to the search results container
+//         searchResults.innerHTML += resultHTML;
+//     });
+// }
 
 
 // DYNAMIC-CONTENT
@@ -94,92 +142,3 @@ document.addEventListener("DOMContentLoaded", function () {
     contentContainer.innerHTML = contentHTML;
 });
 
-
-
-//  function search() {
-//     const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
-//     const searchResults = document.getElementById('searchResults');
-
-//     // Clear previous results
-//     searchResults.innerHTML = '';
-
-//     // Filter items based on the search input and keywords
-//     const results = allItems.filter(item => {
-//         const titleMatch = item.title.toLowerCase().includes(searchInput);
-//         const keywordMatch = item.keywords.some(keyword => keyword.includes(searchInput));
-//         return titleMatch || keywordMatch;
-//     });
-
-//     // Display results
-//     results.forEach(result => {
-//         const resultElement = document.createElement('div');
-
-//         // Generate links based on the lowercase title of the page, replacing spaces with hyphens
-//         const formattedTitle = result.title.toLowerCase().replace(/\s+/g, '-');
-//         resultElement.innerHTML = `<a href="pages/${encodeURIComponent(formattedTitle)}.html">${result.title}</a>`;
-
-//         searchResults.appendChild(resultElement);
-//     });
-//  }
-
-
-
-//hjbkjbvkjbkjbjkbjkbkjb
-
-
-// // Include Fuse.js (can also be loaded from a local file)
-// const fuse = require('fuse.js');
-
-// // Prepare page data (replace with your actual page content and ensure each page has an "id" property)
-// const pages = [
-//     {
-//         id: 1,
-//         title: "sermons list",
-//         keywords: "prophetic, impartation",
-//         content: "Prophetic impartation stands as a conduit of divine guidance, carrying the timeless wisdom, insights, and revelations gifted by God through His chosen vessels. Its significance lies in its ability to illuminate our paths, offering clarity, direction, and encouragement in times of uncertainty."
-//     },
-//     {
-//         id: 2,
-//         title: "_settings",
-//         keywords: "apostle femi lazarus, about us",
-//         content: "Sphere of Light Church is a ministry pastored by Apostle Femi Lazarus with a mandate to Raise God's End Time Armies for the last days"
-//     },
-//     // ... (add more pages)
-// ];
-
-// // Create Fuse.js index
-// const fuseIndex = new Fuse(pages, {
-//     keys: [
-//         "title",
-//         "keywords",
-//         "content"
-//     ],
-//     // Customize options for matching and scoring here
-// });
-
-// // Handle search input
-// const searchInput = document.getElementById("search-input");
-// const searchResults = document.getElementById("search-results");
-
-// searchInput.addEventListener("input", () => {
-//     const query = searchInput.value.toLowerCase(); // Case-insensitive search
-
-//     if (query) {
-//         const results = fuseIndex.search(query);
-
-//         searchResults.innerHTML = ""; // Clear previous results
-
-//         results.forEach(result => {
-//             const item = document.createElement("li");
-//             const link = document.createElement("a");
-//             //   link.href = `pages/page-${result.item.id}.html`; // Replace with your actual page paths
-//             link.href = `pages/${encodeURIComponent(result.item.title)}.html`;
-
-//             link.textContent = `${result.item.title} - ${result.item.keywords}`;
-//             item.appendChild(link);
-//             searchResults.appendChild(item);
-//         });
-//     } else {
-//         searchResults.innerHTML = ""; // Clear results if no query
-//     }
-// });
