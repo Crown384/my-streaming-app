@@ -124,8 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let contentHTML = '';
 
     allItems.forEach(item => {
-        const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
-        const relativePath = ('pages/' + item.path + '.html') || ('pages/' + formattedTitle + '.html'); // Use relative path from item object
+        const relativePath = ('pages/' + item.path + '.html'); // Use relative path from item object
 
         contentHTML += `
             <div class="card scroller-elements dynamic-elements">
