@@ -84,25 +84,29 @@ searchInput.addEventListener('input', search); // Fires on every keystroke
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contentContainer = document.getElementById('content-container');
-
-    // Build the HTML string dynamically, including correct paths
-    let contentHTML = '';
-
-    allItems.forEach(item => {
-        const relativePath = ('pages/' + item.path + '.html'); // Use relative path from item object
-
-        contentHTML += `
-            <div class="card scroller-elements dynamic-elements">
-                <a href="${relativePath}">
-                    <img src="${item.imgpath}" alt="${item.title} Image">
-                </a>
-                <p>${item.title}</p>
-            </div>
-        `;
-    });
-
-    // Set the content container's innerHTML with the built string
-    contentContainer.innerHTML = contentHTML;
-});
+    const itemsContainer = document.getElementById('content-container');
+  
+    // Assuming `allItems` is a valid array of objects with necessary properties
+    if (!itemsContainer || !Array.isArray(allItems)) {
+      // Handle potential errors here
+      return;
+    }
+  
+    const contentHTML = allItems.map(item => {
+      const relativePath = `pages/${item.path}.html`; // Use relative path
+  
+      return `
+        <div class="card scroller-elements dynamic-elements">
+          <a href="${relativePath}">
+            <img src="${item.imgpath}" alt="${item.title} Image">
+          </a>
+          <p>${item.title}</p>
+        </div>
+      `;
+    }).join('');
+  
+    // Set the content container's innerHTML
+    itemsContainer.innerHTML = contentHTML;
+  });
+  
 
