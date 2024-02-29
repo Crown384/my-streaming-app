@@ -71,7 +71,6 @@ function search() {
         <a href="${relativePath}">
           <img src="${item.imgpath}" alt="${item.title}" class="search-result-image">
           <h3 class="search-result-title">${item.title}</h3>
-          <p class="search-result-description">${item.description}</p>
         </a>
       </div>
     `;
