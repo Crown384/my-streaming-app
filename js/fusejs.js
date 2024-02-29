@@ -95,14 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentHTML = allItems.map(item => {
       const relativePath = `pages/${item.path}.html`; // Use relative path
   
-      return `
-        <div class="card scroller-elements dynamic-elements">
+      return `<div>
           <a href="${relativePath}">
             <img src="${item.imgpath}" alt="${item.title} Image">
           </a>
           <p>${item.title}</p>
-        </div>
-      `;
+        </div>`;
     }).join('');
   
     // Set the content container's innerHTML
