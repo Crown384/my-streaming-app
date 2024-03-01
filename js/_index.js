@@ -1,5 +1,12 @@
 const allItems = [
   {
+    title: 'Altars: PEACE OFFERING',
+    keywords: ['keyword1', 'keyword2'],
+    imgpath: 'https://i.ytimg.com/vi/e_C3w6eNyAE/hqdefault.jpg', // Added imgpath
+    description: 'Peace Offering', // Added description
+    path: "singlePlay/peace-offering"
+  },
+  {
     title: 'Science of Altars: Beauty of Substitution',
     keywords: ['keyword1', 'keyword2'],
     imgpath: 'https://i.ytimg.com/vi/mgnUXY9cp70/hqdefault.jpg', // Added imgpath
