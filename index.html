@@ -32,6 +32,22 @@
         width: 80%;
         aspect-ratio: 16/9;
     }
+    .scroller-playlist {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 45%;
+        overflow: scroll;
+    }
+
+    .scroller-playlist>* {
+        display: grid;
+        place-items: center;
+    }
+
+    .scroller-playlist>*>a>img {
+        width: 80%;
+        aspect-ratio: 1/1;
+    }
 </style>
 
 <body>
@@ -44,6 +60,12 @@
         <section>
             <h1>Dynamic Content</h1>
             <div id="content-container" class="scroller dynamic-scroller">
+
+            </div>
+        </section>
+        <section>
+            <h1>Playlist Dynamic</h1>
+            <div id="playlist-container" class="scroller-playlist dynamic-scroller">
 
             </div>
         </section>
