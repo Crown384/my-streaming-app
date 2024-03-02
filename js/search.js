@@ -140,9 +140,6 @@
 
 
 
-
-
-
 function search() {
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
@@ -164,13 +161,13 @@ function search() {
       const itemDescription = item.description.toLowerCase() || '';
 
       // Check if any of the search terms are not a comma and match the title, keywords, or description
-      return searchTerms.some(term => {
+      return searchTerms.every(term => {
           const termLowerCase = term.trim();
           return (
-              termLowerCase !== ',' &&
+              termLowerCase === ',' || // Ignore commas
               (itemTitle.includes(termLowerCase) ||
-              itemKeywords.some(keyword => keyword.includes(termLowerCase)) ||
-              itemDescription.includes(termLowerCase))
+                  itemKeywords.some(keyword => keyword.includes(termLowerCase)) ||
+                  itemDescription.includes(termLowerCase))
           );
       });
   });
