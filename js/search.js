@@ -137,6 +137,7 @@
 // // Add event listener to search input (adapt event type as needed)
 // searchInput.addEventListener('input', search); // Fires on every keystroke
 
+
 function search() {
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
@@ -169,8 +170,11 @@ function search() {
       });
   });
 
+  // Reverse the order of filteredItems array
+  const reversedItems = filteredItems.reverse();
+
   // Render search results (adapt HTML structure as needed)
-  searchResults.innerHTML = filteredItems.map(item => {
+  searchResults.innerHTML = reversedItems.map(item => {
       const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
       const relativePath = `pages/${item.path}.html`; // Assuming path structure
 
