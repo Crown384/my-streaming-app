@@ -39,6 +39,10 @@ function search() {
             <img src="${item.imgpath}" alt="${item.title}" class="search-result-image">
             <h3 class="search-result-title">${item.title}</h3>
           </a>
+
+          <a href="${item.downLink}">
+            <span class="material-symbols-sharp">download_for_offline</span>
+        </a>
         </div>
       `;
     }).join('');
