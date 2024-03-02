@@ -99,6 +99,7 @@ function search() {
 }
 
 // Helper function to split query into words, considering quoted phrases
+
 function splitQueryIntoWords(query) {
   const words = [];
   let currentWord = ''; // Build up the current word
@@ -114,7 +115,7 @@ function splitQueryIntoWords(query) {
         words.push(currentWord.slice(1, -1)); // Remove quotes
         currentWord = '';
       }
-    } else if (/\s/.test(char)) { // Whitespace (except within quotes)
+    } else if (/\s/.test(char)) { // Whitespace (including comma)
       if (currentWord) {
         words.push(currentWord);
         currentWord = '';
@@ -131,6 +132,7 @@ function splitQueryIntoWords(query) {
 
   return words;
 }
+
 
 // Add event listener to search input (adapt event type as needed)
 searchInput.addEventListener('input', search); // Fires on every keystroke
