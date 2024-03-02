@@ -11,7 +11,7 @@ const allPlaylists = [
     },
     {
         title: 'Science of Altars',
-        path: 'playlists/science-of-altars',
+        path: 'playlists/science_of_altars',
         imgpath: 'https://i.ytimg.com/vi/fb0vv8_ZnDI/hqdefault.jpg',
     }
 ]

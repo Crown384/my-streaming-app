@@ -80,27 +80,6 @@ const allItems = [
     downLink: '',
 
   },
-  {
-    id: 3,
-    title: 'Sermons List',
-    keywords: ['',],
-    imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-    description: 'list page', // Added description
-    path: "sermons-list",
-    downLink: '',
-
-  },
-  {
-    id: 2,
-    title: 'Latest',
-    keywords: ['keyword1', 'keyword2'],
-    imgpath: 'https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/32832133/32832133-1666371635126-ab1bb239f958f.jpg', // Added imgpath
-    description: 'the sermons list page LATEST', // Added description
-    path: "playlists/test",
-    downLink: '',
-
-  },
-  // ... more items with imgpath and description added
 ];
 
 
