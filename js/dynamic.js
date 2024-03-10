@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="${relativePath}">
                     <img src="${item.imgpath}" alt="${item.title} Image">
                 </a>
-                <p>${item.title}</p>
+                <p class="truncate-1">${item.title}</p>
             </div>
         `;
     });
