@@ -34,7 +34,7 @@
 
 
 
-const keyword = 'koinonia'; // Replace with your desired keyword
+const keyword = 'apostle'; // Replace with your desired keyword
 
 const filteredSermons = allItems.filter(sermon => {
     const sermonKeywords = sermon.keywords || []; // Handle potential absence of keywords
