@@ -1,7 +1,7 @@
 const allItems = [
   {
     title: 'Complete Deliverance 3',
-    keywords: ['mystery', 'deliverance','3','complete','Joshua','selman','apostle'],
+    keywords: ['mystery', 'deliverance','3','complete','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/QJQCczhT50Q/hqdefault.jpg', // Added imgpath
     description: 'Complete Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/complete-deliverance-3",
@@ -9,7 +9,7 @@ const allItems = [
   },
   {
     title: 'Complete Deliverance 2',
-    keywords: ['mystery', 'deliverance','2','complete','Joshua','selman','apostle'],
+    keywords: ['mystery', 'deliverance','2','complete','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/ElTiiLo-muY/hqdefault.jpg', // Added imgpath
     description: 'Complete Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/complete-deliverance-2",
@@ -17,7 +17,7 @@ const allItems = [
   },
   {
     title: 'Complete Deliverance 1',
-    keywords: ['mystery', 'deliverance','1','complete','Joshua','selman','apostle'],
+    keywords: ['mystery', 'deliverance','1','complete','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/DMerAu6FVH4/hqdefault.jpg', // Added imgpath
     description: 'Complete Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/complete-deliverance-1",
@@ -25,7 +25,7 @@ const allItems = [
   },
   {
     title: 'Mystery of Deliverance 4',
-    keywords: ['mystery', 'deliverance','Joshua','selman','apostle','4'],
+    keywords: ['mystery', 'deliverance','Joshua','selman','apostle','4','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/ZQR-yYplbk0/hqdefault.jpg', // Added imgpath
     description: 'The mystery of Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/mystery-of-deliverance-4",
@@ -33,7 +33,7 @@ const allItems = [
   },
   {
     title: 'Mystery of Deliverance 3',
-    keywords: ['mystery', 'deliverance','3','Joshua','selman','apostle',],
+    keywords: ['mystery', 'deliverance','3','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/AeVEayqwwns/hqdefault.jpg', // Added imgpath
     description: 'The mystery of Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/mystery-of-deliverance-3",
@@ -41,7 +41,7 @@ const allItems = [
   },
   {
     title: 'Mystery of Deliverance 2',
-    keywords: ['mystery', 'deliverance','2','Joshua','selman','apostle',],
+    keywords: ['mystery', 'deliverance','2','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/nfiwGGn_kC0/hqdefault.jpg', // Added imgpath
     description: 'The mystery of Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/mystery-of-deliverance-2",
@@ -49,7 +49,7 @@ const allItems = [
   },
   {
     title: 'Mystery of Deliverance 1',
-    keywords: ['mystery', 'deliverance','1','Joshua','selman','apostle',],
+    keywords: ['mystery', 'deliverance','1','Joshua','selman','apostle','koinonia'],
     imgpath: 'https://i.ytimg.com/vi/F5iDvPRhtfI/hqdefault.jpg', // Added imgpath
     description: 'The mystery of Deliverance with Apostle Joshua Selman', // Added description
     path: "singlePlay/mystery-of-deliverance-1",

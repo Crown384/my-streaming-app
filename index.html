@@ -8,9 +8,12 @@
     <title>Home</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
-    <script src="/js/_index.js" defer></script>   
+    <script src="/js/_index.js" defer></script>
+
+    <script src="/js/keywords.js" defer></script>
     <script src="/js/dynamic.js" defer></script>
     <script src="/js/playlist_dynamic.js"></script>
     <script src="/js/playlist_dynamic_script.js"></script>
@@ -37,6 +40,7 @@
         object-fit: cover;
         object-position: center;
     }
+
     .scroller-playlist {
         display: grid;
         grid-auto-flow: column;
@@ -92,6 +96,12 @@
             <h1>Playlists</h1>
         </a>
 
+
+        <!-- HTML Container for Displaying Filtered Items -->
+        <div id="koinonia"></div>
+
+        
+
     </main>
 
 
@@ -122,7 +132,6 @@
         </a>
 
     </footer>
-    <script src="/js/fusejs.js"></script>
 
 </body>
 
