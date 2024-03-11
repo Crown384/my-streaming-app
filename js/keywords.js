@@ -5,8 +5,8 @@ function filterSermonsByKeywords(keywords) {
     });
 }
 
-// Function to render filtered items to the specified container ('koinonia' in this case)
-function renderFilteredSermons(filteredItems) {
+// Function to render filtered items to the specified container
+function renderFilteredSermons(koinonia, filteredItems) {
     const container = document.getElementById('koinonia');
     container.innerHTML = '';
 
@@ -28,5 +28,5 @@ const filterKeywords = ['koinonia', 'apostle'];
 // Get filtered items based on keywords
 const filteredSermons = filterSermonsByKeywords(filterKeywords);
 
-// Render filtered items to the specified container ('koinonia')
-renderFilteredSermons(filteredSermons);
+// Render filtered items to the specified container
+renderFilteredSermons('koinonia', filteredSermons);
