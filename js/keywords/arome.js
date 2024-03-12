@@ -5,10 +5,10 @@ function filterSermonsByKeywords(keywords) {
     });
 }
 
-// Function to render filtered items to the specified container ('koinonia' in this case)
+// Function to render filtered items to the specified containerarome ('koinonia' in this case)
 function renderFilteredSermons(filteredItems) {
-    const container = document.getElementById('arome-sermons');
-    container.innerHTML = '';
+    const containerarome = document.getElementById('aromeSermons');
+    containerarome.innerHTML = '';
 
     filteredItems.forEach(item => {
         const sermonHTML = `
@@ -18,7 +18,7 @@ function renderFilteredSermons(filteredItems) {
           <!-- Add other properties as needed -->
         </div>
       `;
-        container.innerHTML += sermonHTML;
+        containerarome.innerHTML += sermonHTML;
     });
 }
 
@@ -28,5 +28,5 @@ const filterKeywords = ['arome'];
 // Get filtered items based on keywords
 const filteredSermons = filterSermonsByKeywords(filterKeywords);
 
-// Render filtered items to the specified container ('koinonia')
+// Render filtered items to the specified containerarome ('koinonia')
 renderFilteredSermons(filteredSermons);
