@@ -111,12 +111,16 @@ function renderFilteredItems(containerId, filteredItems) {
     const container = document.getElementById(containerId);
     container.innerHTML = '';
 
+    const relativePath = ('pages/' + item.path + '.html'); // Use relative path from item object
+
+
     filteredItems.forEach(item => {
         const itemHTML = `
-        <div class="item">
-          <h3>${item.title}</h3>
-          <p>${item.description}</p>
-          <!-- Add other properties as needed -->
+        <div class="card scroller-elements dynamic-elements">
+                <a href="${relativePath}">
+                    <img src="${item.imgpath}" alt="${item.title} Image">
+                </a>
+                <p class="truncate truncate-1">${item.title}</p>
         </div>
       `;
         container.innerHTML += itemHTML;
