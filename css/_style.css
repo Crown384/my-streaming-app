@@ -25,6 +25,11 @@ html {
     scroll-behavior: smooth;
 
     background-color: var(--bg-color);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
 }
 
 
