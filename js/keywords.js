@@ -88,7 +88,7 @@ function renderFilteredSermons(filteredItems) {
 }
 
 // Specify the keywords to filter by
-const filterKeywords = ['koinonia', 'apostle'];
+const filterKeywords = ['koinonia'];
 
 // Get filtered items based on keywords
 const filteredSermons = filterSermonsByKeywords(filterKeywords);
