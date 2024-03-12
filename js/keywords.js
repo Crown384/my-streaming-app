@@ -63,35 +63,76 @@
 // }
 
 
+// // Function to filter items based on keywords
+// function filterSermonsByKeywords(keywords) {
+//     return allItems.filter(item => {
+//         return keywords.some(keyword => item.keywords.includes(keyword.toLowerCase()));
+//     });
+// }
+
+// // Function to render filtered items to the specified container ('koinonia' in this case)
+// function renderFilteredSermons(filteredItems) {
+//     const container = document.getElementById('koinonia');
+//     container.innerHTML = '';
+
+//     filteredItems.forEach(item => {
+//         const sermonHTML = `
+//         <div class="sermon-item">
+//           <h3>${item.title}</h3>
+//           <p>${item.description}</p>
+//           <!-- Add other properties as needed -->
+//         </div>
+//       `;
+//         container.innerHTML += sermonHTML;
+//     });
+// }
+
+// // Specify the keywords to filter by
+// const filterKeywords = ['koinonia'];
+
+// // Get filtered items based on keywords
+// const filteredSermons = filterSermonsByKeywords(filterKeywords);
+
+// // Render filtered items to the specified container ('koinonia')
+// renderFilteredSermons(filteredSermons);
+
+
+
+
 // Function to filter items based on keywords
-function filterSermonsByKeywords(keywords) {
-    return allItems.filter(item => {
+function filterItemsByKeywords(items, keywords) {
+    return items.filter(item => {
         return keywords.some(keyword => item.keywords.includes(keyword.toLowerCase()));
     });
 }
 
-// Function to render filtered items to the specified container ('koinonia' in this case)
-function renderFilteredSermons(filteredItems) {
-    const container = document.getElementById('koinonia');
+// Function to render filtered items to the specified container
+function renderFilteredItems(containerId, filteredItems) {
+    const container = document.getElementById(containerId);
     container.innerHTML = '';
 
     filteredItems.forEach(item => {
-        const sermonHTML = `
-        <div class="sermon-item">
+        const itemHTML = `
+        <div class="item">
           <h3>${item.title}</h3>
           <p>${item.description}</p>
           <!-- Add other properties as needed -->
         </div>
       `;
-        container.innerHTML += sermonHTML;
+        container.innerHTML += itemHTML;
     });
 }
 
-// Specify the keywords to filter by
-const filterKeywords = ['koinonia'];
+// Specify the keywords and container ID for each section
+const sectionFilters = [
+    { keywords: ['koinonia'], containerId: 'koinonia' },
+    { keywords: ['arome', 'osayi'], containerId: 'aromeSermons' },
+    // Add more sections as needed
+];
 
-// Get filtered items based on keywords
-const filteredSermons = filterSermonsByKeywords(filterKeywords);
+// Loop through each section filter and render filtered items
+sectionFilters.forEach(filter => {
+    const filteredItems = filterItemsByKeywords(allItems, filter.keywords);
+    renderFilteredItems(filter.containerId, filteredItems);
+});
 
-// Render filtered items to the specified container ('koinonia')
-renderFilteredSermons(filteredSermons);
