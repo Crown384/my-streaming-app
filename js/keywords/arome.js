@@ -11,14 +11,14 @@ function renderFilteredSermons(filteredItems) {
     containerarome.innerHTML = '';
 
     filteredItems.forEach(item => {
-        const sermonHTML = `
+        const sermonAromeHTML = `
         <div class="sermon-item">
           <h3>${item.title}</h3>
           <p>${item.description}</p>
           <!-- Add other properties as needed -->
         </div>
       `;
-        containerarome.innerHTML += sermonHTML;
+        containerarome.innerHTML += sermonAromeHTML;
     });
 }
 
