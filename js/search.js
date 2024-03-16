@@ -19,7 +19,7 @@ function search() {
   
     // Filter items for each search term and concatenate the results
     searchTerms.forEach(term => {
-      const filteredItems = allSermons.filter(item => {
+      const filteredItems = allItems.filter(item => {
         const itemKeywords = item.keywords || [];
         const itemTitle = item.title.toLowerCase();
         const itemDescription = item.description.toLowerCase() || '';
