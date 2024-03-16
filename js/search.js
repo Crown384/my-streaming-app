@@ -153,7 +153,7 @@ function search() {
     // Split the search query into individual terms at spaces
     const searchTerms = searchQuery.split(/\s+/);
   
-    const filteredItems = allSermons.filter(item => {
+    const filteredItems = allItems.filter(item => {
       const itemKeywords = item.keywords || [];
       const itemTitle = item.title.toLowerCase();
       const itemDescription = item.description.toLowerCase() || '';
