@@ -139,58 +139,59 @@
 
 
 function search() {
-  const searchInput = document.getElementById('searchInput');
-  const searchResults = document.getElementById('searchResults');
-  const searchQuery = searchInput.value.toLowerCase().trim(); // Trim leading/trailing spaces
-
-  // Clear previous results
-  searchResults.innerHTML = '';
-
-  if (!searchQuery) {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const searchQuery = searchInput.value.toLowerCase().trim(); // Trim leading/trailing spaces
+  
+    // Clear previous results
+    searchResults.innerHTML = '';
+  
+    if (!searchQuery) {
       return; // No need to filter or render if search query is empty
-  }
-
-  // Split the search query into individual terms at commas
-  const searchTerms = searchQuery.split(/\s*,\s*/);
-
-  const filteredItems = allItems.filter(item => {
+    }
+  
+    // Split the search query into individual terms at spaces
+    const searchTerms = searchQuery.split(/\s+/);
+  
+    const filteredItems = allSermons.filter(item => {
       const itemKeywords = item.keywords || [];
       const itemTitle = item.title.toLowerCase();
       const itemDescription = item.description.toLowerCase() || '';
-
-      // Check if any of the search terms are not empty or a comma and match the title, keywords, or description
+  
+      // Check if any of the search terms are not empty and match the title, keywords, or description
       return searchTerms.some(term => {
-          const termLowerCase = term.trim();
-          return (
-              (termLowerCase && termLowerCase !== ',') &&
-              (itemTitle.includes(termLowerCase) ||
-                  itemKeywords.some(keyword => keyword.includes(termLowerCase)) ||
-                  itemDescription.includes(termLowerCase))
-          );
+        const termLowerCase = term.trim();
+        return (
+          termLowerCase &&
+          (itemTitle.includes(termLowerCase) ||
+            itemKeywords.some(keyword => keyword.includes(termLowerCase)) ||
+            itemDescription.includes(termLowerCase))
+        );
       });
-  });
-
-  // Reverse the order of filteredItems array
-  const reversedItems = filteredItems.reverse();
-
-  // Render search results (adapt HTML structure as needed)
-  searchResults.innerHTML = reversedItems.map(item => {
+    });
+  
+    // Reverse the order of filteredItems array
+    const reversedItems = filteredItems.reverse();
+  
+    // Render search results (adapt HTML structure as needed)
+    searchResults.innerHTML = reversedItems.map(item => {
       const formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-');
       const relativePath = `pages/${item.path}.html`; // Assuming path structure
-
+  
       return `
-          <div class="search-result">
-              <a href="${relativePath}">
-                  <img src="${item.imgpath}" alt="${item.title}" class="search-result-image">
-                  <h3 class="search-result-title">${item.title}</h3>
-              </a>
-              <a href="${item.downLink}">
-                  <span class="material-symbols-sharp">download_for_offline</span>
-              </a>
-          </div>
-      `;
-  }).join('');
-}
-
-// Add event listener to search input (adapt event type as needed)
-searchInput.addEventListener('input', search); // Fires on every keystroke
+        <div class="search-result">
+        <a href="${relativePath}">
+            <img src="${item.imgpath}" alt="${item.title}" class="search-result-image">
+            <div class="texts">
+                <h3 class="search-result-title">${item.title}</h3>
+                <p class="truncate truncate-3">${item.description}</p>
+            </div>
+        </a>
+    </div>
+        `;
+    }).join('');
+  }
+  
+  // Add event listener to search input (adapt event type as needed)
+  searchInput.addEventListener('input', search); // Fires on every keystroke
+  
